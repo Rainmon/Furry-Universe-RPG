@@ -1,0 +1,88 @@
+    <div>
+<label class="ability-label">{{localize 'FU.Settings'}}</label>
+    </div>
+    <div class="grid grid-4col resource-label settings"> 
+      {{!-- Col. 1 --}}
+      <div class="grid-span-2">
+    <ul style="list-style-type: none;">
+      {{!-- Magic --}}
+      <li><label class="resource skill-name">
+        <input type="checkbox" name="system.magic.check" {{checked system.magic.check }}/>{{localize 'FU.ArcaneBackground'}}</label></li>
+      {{!-- Modifiers --}}  
+      <li>
+        <label for="system.unshake.mod.value" class="resource skill-name" style="width:200px">
+          <input type="text" style="width:25px" name="system.unshake.mod.value" value="{{system.unshake.mod.value}}" data-dtype="Number"/>
+        {{localize 'FU.UnshakeMod'}}</label>
+      </li>
+      <li>
+        <label for="system.soak.mod.value" class="resource skill-name" style="width:200px">
+        <input type="text"  style="width:25px" name="system.soak.mod.value" value="{{system.soak.mod.value}}" data-dtype="Number"/>
+        {{localize 'FU.SoakMod'}}</label>
+      </li>
+       <li>
+        <label for="system.soak.mod.value" class="resource skill-name" style="width:200px">
+        <input type="text"  style="width:25px" name="system.wounds.max" value="{{system.wounds.max}}" data-dtype="Number"/>
+        {{localize 'FU.WoundsMax'}}</label>
+      </li>
+       <li>
+        <label for="system.soak.mod.value" class="resource skill-name" style="width:200px">
+        <input type="text"  style="width:25px" name="system.insanity.max" value="{{system.insanity.max}}" data-dtype="Number"/>
+        {{localize 'FU.InsanityMax'}}</label>
+      </li>
+         <li>
+        <label for="system.soak.mod.value" class="resource skill-name" style="width:200px">
+        <input type="text"  style="width:25px" name="system.exhaustion.max" value="{{system.exhaustion.max}}" data-dtype="Number"/>
+        {{localize 'FU.ExhaustionMax'}}</label>
+      </li>
+
+    </ul>
+    </div>
+{{!-- Col. 3 --}}
+    <div class="grid-span-2">
+     <ol class="items-list effects-list">
+  {{#each effects as |section sid|}}
+    <li class="items-header flexrow" data-effect-type="{{section.type}}" data-parent-id="{{@root.actor.id}}" >
+      <h3 class="item-name effect-name flexrow">{{localize section.label}}</h3>
+      <div class="effect-source">{{localize "FU.Effect.Source"}}</div>
+      <div class="effect-source">{{localize "EFFECT.TabDuration"}}</div>
+      <div class="item-controls effect-controls flexrow">
+        <a class="effect-control" data-action="create" title="{{localize 'DOCUMENT.Create' type="Effect"}}">
+          <i class="fas fa-plus"></i> {{localize "DOCUMENT.New" type="Effect"}}
+        </a>
+      </div>
+    </li>
+
+    <ol class="item-list">
+    {{#each section.effects as |effect|}}
+      <li class="item effect flexrow" data-effect-id="{{effect.id}}" data-parent-id="{{effect.parent.id}}">
+        <div class="item-name effect-name flexrow">
+          <img class="item-image" src="{{effect.icon}}"/>
+          <h4>{{effect.name}}</h4>
+        </div>
+        <div class="effect-source">{{effect.sourceName}}</div>
+        <div class="effect-duration">{{effect.duration.label}}</div>
+        <div class="item-controls effect-controls flexrow">
+          <a class="effect-control" data-action="toggle" title="{{localize 'FU.Effect.Toggle'}}">
+            <i class="fas {{#if effect.disabled}}fa-check{{else}}fa-times{{/if}}"></i>
+          </a>
+          <a class="effect-control" data-action="edit" title="{{localize 'DOCUMENT.Update' type="Effect"}}">
+            <i class="fas fa-edit"></i>
+          </a>
+          <a class="effect-control" data-action="delete" title="{{localize 'DOCUMENT.Delete' type="Effect"}}">
+            <i class="fas fa-trash"></i>
+          </a>
+        </div>
+      </li>
+    {{/each}}
+    </ol>
+  {{/each}}
+      </ol>
+    </div>
+  </div>
+
+
+
+
+                                    
+ 
+ 

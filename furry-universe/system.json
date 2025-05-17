@@ -1,0 +1,47 @@
+{
+  "id": "furry-universe",
+  "title": "Wild Furry Universe",
+  "description": "The Wild Furry Universe system for FoundryVTT!",
+  "authors": [
+    {
+      "name": "Rainmon",
+      "discord": "Rainmon"
+    }
+  ],
+  "url": "Replace this with a link to your public repository",
+  "license": "LICENSE.txt",
+  "readme": "README.md",
+  "bugs": "Replace this with a link to file issues or tickets",
+  "changelog": "CHANGELOG.md",
+  "media": [
+    {
+      "type": "setup",
+      "url": "systems/furry-universe/assets/anvil-impact.jpg",
+      "thumbnail": "systems/furry-universe/assets/anvil-impact.jpg"
+    }
+  ],
+  "version": "2.0.0",
+  "compatibility": {
+    "minimum": 11,
+    "verified": "12"
+  },
+  "esmodules": ["module/furry-universe.mjs"],
+  "styles": ["css/furry-universe.css"],
+  "languages": [
+    {
+      "lang": "en",
+      "name": "English",
+      "path": "lang/en.json"
+    }
+  ],
+  "packs": [],
+  "packFolders": [],
+  "socket": false,
+  "manifest": "Replace this with a link to the /latest release system.json so people can receive updates after they've installed the system",
+  "download": "This must link to a .zip file of the current version",
+  "background": "systems/furry-universe/assets/anvil-impact.jpg",
+  "gridDistance": 2,
+  "gridUnits": "m",
+  "primaryTokenAttribute": "wounds",
+  "secondaryTokenAttribute": "magic"
+}

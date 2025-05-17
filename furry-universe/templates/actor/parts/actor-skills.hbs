@@ -1,0 +1,1030 @@
+
+
+{{!-- Skill Select --}}
+<div class="dropdown-form">
+  <input type="checkbox" name="system.skill.select" id="toggle-form" {{ checked system.skill.select }}>
+  <label class="toggle-label" for="toggle-form">{{localize 'FU.Skills'}}   <img style="width: 15px;height: 15px;" src="systems\furry-universe\assets\cog.png"  alt="Roll" /></label>
+
+  <div class="form-content">
+    <label class="ability-label">{{localize 'FU.SkillSelect'}}</label>
+    <div class="grid grid-4col resource-label"> 
+      {{!-- Col. 1 --}}
+    <ul style="list-style-type: none;">
+      <li>{{localize 'FU.SkillsP'}}</li>
+      <li><label class="resource skill-name">
+        <input type="checkbox" name="system.Shooting.check" {{ checked system.Shooting.check }} />{{localize 'FU.Skill.Shooting'}}</label></li>
+      <li><label class="resource skill-name">
+        <input type="checkbox" name="system.Stealth.check" {{ checked system.Stealth.check }} />{{localize 'FU.Skill.Stealth'}}</label></li>
+      <li><label class="resource skill-name">
+        <input type="checkbox" name="system.Tievery.check" {{ checked system.Tievery.check }} />{{localize 'FU.Skill.Tievery'}}</label></li>
+      <li><label class="resource skill-name">
+        <input type="checkbox" name="system.Driving.check" {{ checked system.Driving.check }} />{{localize 'FU.Skill.Driving'}}</label></li>
+      <li><label class="resource skill-name">
+       <input type="checkbox" name="system.Riding.check" {{ checked system.Riding.check }} />{{localize 'FU.Skill.Riding'}}</label></li>
+    </ul>
+{{!-- Col. 2 --}}
+    <ul style="list-style-type: none;">
+      <li>{{localize 'FU.SkillsM'}}</li>
+      <li><label class="resource skill-name">
+        <input type="checkbox" name="system.Investigation.check" {{ checked system.Investigation.check }} />{{localize 'FU.Skill.Investigation'}}</li>
+      <li><label class="resource skill-name">
+        <input type="checkbox" name="system.Perception.check" {{ checked system.Perception.check }} />{{localize 'FU.Skill.Perception'}}</li>
+      <li><label class="resource skill-name">
+        <input type="checkbox" name="system.Healing.check" {{ checked system.Healing.check }} />{{localize 'FU.Skill.Healing'}}</li>
+      <li><label class="resource skill-name">
+        <input type="checkbox" name="system.Repair.check" {{ checked system.Repair.check }} />{{localize 'FU.Skill.Repair'}}</li>
+      <li><label class="resource skill-name">
+        <input type="checkbox" name="system.Piloting.check" {{ checked system.Piloting.check }} />{{localize 'FU.Skill.Piloting'}}</li>
+      <li><label class="resource skill-name">
+        <input type="checkbox" name="system.Survival.check" {{ checked system.Survival.check }} />{{localize 'FU.Skill.Survival'}}</li>
+      <li><label class="resource skill-name">
+        <input type="checkbox" name="system.Hacking.check" {{ checked system.Hacking.check }} />{{localize 'FU.Skill.Hacking'}}</li>
+      <li><label class="resource skill-name">
+        <input type="checkbox" name="system.Navigation.check" {{ checked system.Navigation.check }} />{{localize 'FU.Skill.Navigation'}}</li>
+      <li><label class="resource skill-name">
+        <input type="checkbox" name="system.Spellcasting.check" {{ checked system.Spellcasting.check }} />{{localize 'FU.Skill.Spellcasting'}}</li>
+    </ul>
+{{!-- Col. 3 --}}
+     <ul style="list-style-type: none;">
+      <li>{{localize 'FU.SkillsK'}}</li>
+      <li><label class="resource skill-name">
+        <input type="checkbox" name="system.Trade.check" {{ checked system.Trade.check }} />{{localize 'FU.Skill.Trade'}}</li>
+      <li><label class="resource skill-name">
+        <input type="checkbox" name="system.History.check" {{ checked system.History.check }} />{{localize 'FU.Skill.History'}}</li>
+      <li><label class="resource skill-name">
+        <input type="checkbox" name="system.Cartography.check" {{ checked system.Cartography.check }} />{{localize 'FU.Skill.Cartography'}}</li>
+      <li><label class="resource skill-name">
+        <input type="checkbox" name="system.Space.check" {{ checked system.Space.check }} />{{localize 'FU.Skill.Space'}}</li>
+      <li><label class="resource skill-name">
+        <input type="checkbox" name="system.Art.check" {{ checked system.Art.check }} />{{localize 'FU.Skill.Art'}}</li>
+      <li><label class="resource skill-name">
+        <input type="checkbox" name="system.Tactic.check" {{ checked system.Tactic.check }} />{{localize 'FU.Skill.Tactic'}}</li>
+      <li><label class="resource skill-name">
+        <input type="checkbox" name="system.Technology.check" {{ checked system.Technology.check }} />{{localize 'FU.Skill.Technology'}}</li>
+      <li><label class="resource skill-name">
+        <input type="checkbox" name="system.Arcane.check" {{ checked system.Arcane.check }} />{{localize 'FU.Skill.Arcane'}}</li>
+      <li><label class="resource skill-name">
+        <input type="checkbox" name="system.Medicine.check" {{ checked system.Medicine.check }} />{{localize 'FU.Skill.Medicine'}}</li>
+      <li><label class="resource skill-name">
+        <input type="checkbox" name="system.Nature.check" {{ checked system.Nature.check }} />{{localize 'FU.Skill.Nature'}}</li>
+      <li><label class="resource skill-name">
+        <input type="checkbox" name="system.Science.check" {{ checked system.Science.check }} />{{localize 'FU.Skill.Science'}}</li>
+      <li><label class="resource skill-name">
+        <input type="checkbox" name="system.Occult.check" {{ checked system.Occult.check }} />{{localize 'FU.Skill.Occult'}}</li>
+      <li><label class="resource skill-name">
+        <input type="checkbox" name="system.Politic.check" {{ checked system.Politic.check }} />{{localize 'FU.Skill.Politic'}}</li>
+      <li><label class="resource skill-name">
+        <input type="checkbox" name="system.Underworld.check" {{ checked system.Underworld.check }} />{{localize 'FU.Skill.Underworld'}}</li>
+      <li><label class="resource skill-name">
+        <input type="checkbox" name="system.Religion.check" {{ checked system.Religion.check }} />{{localize 'FU.Skill.Religion'}}</li>
+     </ul>
+{{!-- Col. 4 --}}
+    <ul style="list-style-type: none;">
+      <li>{{localize 'FU.SkillsS'}}</li>
+      <li><label class="resource skill-name">
+        <input type="checkbox" name="system.Faith.check" {{ checked system.Faith.check }} />{{localize 'FU.Skill.Faith'}}</li>
+      <li><label class="resource skill-name">
+        <input type="checkbox" name="system.Taming.check" {{ checked system.Taming.check }} />{{localize 'FU.Skill.Taming'}}</li>
+      <li><label class="resource skill-name">
+        <input type="checkbox" name="system.Persuasion.check" {{ checked system.Persuasion.check }} />{{localize 'FU.Skill.Persuasion'}}</li>
+      <li><label class="resource skill-name">
+        <input type="checkbox" name="system.Psionic.check" {{ checked system.Psionic.check }} />{{localize 'FU.Skill.Psionic'}}</li>
+      <li><label class="resource skill-name">
+        <input type="checkbox" name="system.Perform.check" {{ checked system.Perform.check }} />{{localize 'FU.Skill.Perform'}}</li>
+      <li><label class="resource skill-name">
+       <input type="checkbox" name="system.Intimidation.check" {{ checked system.Intimidation.check }} />{{localize 'FU.Skill.Intimidation'}}</li>
+      <li><label class="resource skill-name">
+        <input type="checkbox" name="system.Bluff.check" {{ checked system.Bluff.check }} />{{localize 'FU.Skill.Bluff'}}</li>
+      <li><label class="resource skill-name">
+        <input type="checkbox" name="system.Rituals.check" {{ checked system.Rituals.check }} />{{localize 'FU.Skill.Rituals'}}</li>
+      </ul> 
+      </div>
+  </div>
+</div>
+
+{{!-- Skill List --}}
+<div class="grid grid-3col">
+
+{{!-- Physical Skills Bar --}}
+<div class="resource flex-group-center">
+     <li class='items-header items-list'>
+<label class="" style="">{{localize 'FU.SkillsP'}}</label>
+  </li>
+
+
+  {{!-- Unskilled --}}
+<div class="grid grid-2col underline">
+ <div class="flex flex-group-left"> 
+   <button type="rolldie" class="skill-roll rollable"  
+    data-roll="{d{{system.Unskilled.phy}}x, 1d6x}kh+{{system.Unskilled.modP}}-{{system.wounds.value}}-{{system.exhaustion.value}}" 
+    data-label="{{localize 'FU.Skill.Unskilled'}}">
+    <img src="systems/furry-universe/css/ui/Die.png" alt="Roll" /></button>
+    <label for="system.skills.Unskilled" class="skill-name" data-label="{{localize 'FU.Skill.Unskilled'}}">
+    {{localize 'FU.Skill.Unskilled'}}</label>
+  </div>
+  <div class="flex flex-group-right">
+      <select class="skill-dice" name="system.Unskilled.phy" for="system.Unskilled.phy" type="text">
+    {{selectOptions @root.FU.choice selected=system.Unskilled.phy localize=true}}</select>
+    <span>+</span>
+    <input  class="skill-dice" name="system.Unskilled.modP" value="{{system.Unskilled.modP}}" type="text" />
+  </div>
+</div>
+
+<!-- Atletics -->
+<div class="grid grid-2col underline">
+ <div class="flex flex-group-left"> 
+   <button type="rolldie" class="skill-roll rollable"  
+    data-roll="{d{{system.Atletics.value}}x, 1d6x}kh+{{system.Atletics.mod}}-{{system.wounds.value}}-{{system.exhaustion.value}}" 
+    data-label="{{localize 'FU.Skill.Atletics'}}">
+    <img src="systems/furry-universe/css/ui/Die.png" alt="Roll" /></button>
+    <label for="system.skills.Atletics" class="skill-name" data-label="{{system.Atletics.value}}">
+    {{localize 'FU.Skill.Atletics'}}({{localize 'FU.Ability.Str.abbr'}})</label>
+  </div>
+  <div class="flex flex-group-right">
+    <select class="skill-dice" name="system.Atletics.value" for="system.Atletics.value" type="text">
+    {{selectOptions @root.FU.choice selected=system.Atletics.value localize=true}}</select>
+    <span>+</span>
+    <input  class="skill-dice" name="system.Atletics.mod" value="{{system.Atletics.mod}}" type="text" />
+  </div>
+</div>
+
+<!-- Fighting -->
+<div class="grid grid-2col underline">
+ <div class="flex flex-group-left"> 
+   <button type="rolldie" class="skill-roll rollable"  
+    data-roll="{d{{system.Fighting.value}}x, 1d6x}kh+{{system.Fighting.mod}}-{{system.wounds.value}}-{{system.exhaustion.value}}" 
+    data-label="{{localize 'FU.Skill.Fighting'}}">
+    <img src="systems/furry-universe/css/ui/Die.png" alt="Roll" /></button>
+    <label for="system.skills.Fighting" class="skill-name" data-label="{{system.Fighting.value}}">
+    {{localize 'FU.Skill.Fighting'}}({{localize 'FU.Ability.Dex.abbr'}})</label>
+  </div>
+  <div class="flex flex-group-right">
+    <select class="skill-dice" name="system.Fighting.value" for="system.Fighting.value" type="text">
+    {{selectOptions @root.FU.choice selected=system.Fighting.value localize=true}}</select>
+    <span>+</span>
+    <input  class="skill-dice" name="system.Fighting.mod" value="{{system.Fighting.mod}}" type="text" />
+  </div>
+</div>
+
+<!-- Shooting -->
+{{#if system.Shooting.check}}
+<div class="grid grid-2col underline">
+ <div class="flex flex-group-left"> 
+   <button type="rolldie" class="skill-roll rollable"  
+    data-roll="{d{{system.Shooting.value}}x, 1d6x}kh+{{system.Shooting.mod}}-{{system.wounds.value}}-{{system.exhaustion.value}}" 
+    data-label="{{localize 'FU.Skill.Shooting'}}">
+    <img src="systems/furry-universe/css/ui/Die.png" alt="Roll" /></button>
+    <label for="system.skills.Shooting" class="skill-name" data-label="{{system.Shooting.value}}">
+    {{localize 'FU.Skill.Shooting'}}({{localize 'FU.Ability.Dex.abbr'}})</label>
+  </div>
+  <div class="flex flex-group-right">
+    <select class="skill-dice" name="system.Shooting.value" for="system.Shooting.value" type="text">
+    {{selectOptions @root.FU.choice selected=system.Shooting.value localize=true}}</select>
+    <span>+</span>
+    <input  class="skill-dice" name="system.Shooting.mod" value="{{system.Shooting.mod}}" type="text" />
+  </div>
+</div>
+ {{/if}}
+
+<!-- Stealth -->
+{{#if system.Stealth.check}}
+<div class="grid grid-2col underline">
+ <div class="flex flex-group-left"> 
+   <button type="rolldie" class="skill-roll rollable"  
+    data-roll="{d{{system.Stealth.value}}x, 1d6x}kh+{{system.Stealth.mod}}-{{system.wounds.value}}-{{system.exhaustion.value}}" 
+    data-label="{{localize 'FU.Skill.Stealth'}}">
+    <img src="systems/furry-universe/css/ui/Die.png" alt="Roll" /></button>
+    <label for="system.skills.Stealth" class="skill-name" data-label="{{system.Stealth.value}}">
+    {{localize 'FU.Skill.Stealth'}}({{localize 'FU.Ability.Dex.abbr'}})</label>
+  </div>
+  <div class="flex flex-group-right">
+    <select class="skill-dice" name="system.Stealth.value" for="system.Stealth.value" type="text">
+    {{selectOptions @root.FU.choice selected=system.Stealth.value localize=true}}</select>
+    <span>+</span>
+    <input  class="skill-dice" name="system.Stealth.mod" value="{{system.Stealth.mod}}" type="text" />
+  </div>
+</div>
+ {{/if}}
+
+ <!-- Tievery -->
+{{#if system.Tievery.check}}
+<div class="grid grid-2col underline">
+ <div class="flex flex-group-left"> 
+   <button type="rolldie" class="skill-roll rollable"  
+    data-roll="{d{{system.Tievery.value}}x, 1d6x}kh+{{system.Tievery.mod}}-{{system.wounds.value}}-{{system.exhaustion.value}}" 
+    data-label="{{localize 'FU.Skill.Tievery'}}">
+    <img src="systems/furry-universe/css/ui/Die.png" alt="Roll" /></button>
+    <label for="system.skills.Tievery" class="skill-name" data-label="{{system.Tievery.value}}">
+    {{localize 'FU.Skill.Tievery'}}({{localize 'FU.Ability.Dex.abbr'}})</label>
+  </div>
+  <div class="flex flex-group-right">
+    <select class="skill-dice" name="system.Tievery.value" for="system.Tievery.value" type="text">
+    {{selectOptions @root.FU.choice selected=system.Tievery.value localize=true}}</select>
+    <span>+</span>
+    <input  class="skill-dice" name="system.Tievery.mod" value="{{system.Tievery.mod}}" type="text" />
+  </div>
+</div>
+ {{/if}}
+
+<!-- Driving -->
+{{#if system.Driving.check}}
+<div class="grid grid-2col underline">
+ <div class="flex flex-group-left"> 
+   <button type="rolldie" class="skill-roll rollable"  
+    data-roll="{d{{system.Driving.value}}x, 1d6x}kh+{{system.Driving.mod}}-{{system.wounds.value}}-{{system.exhaustion.value}}" 
+    data-label="{{localize 'FU.Skill.Driving'}}">
+    <img src="systems/furry-universe/css/ui/Die.png" alt="Roll" /></button>
+    <label for="system.skills.Driving" class="skill-name" data-label="{{system.Driving.value}}">
+    {{localize 'FU.Skill.Driving'}}({{localize 'FU.Ability.Dex.abbr'}})</label>
+  </div>
+  <div class="flex flex-group-right">
+    <select class="skill-dice" name="system.Driving.value" for="system.Driving.value" type="text">
+    {{selectOptions @root.FU.choice selected=system.Driving.value localize=true}}</select>
+    <span>+</span>
+    <input  class="skill-dice" name="system.Driving.mod" value="{{system.Driving.mod}}" type="text" />
+  </div>
+</div>
+ {{/if}}
+
+<!-- Riding -->
+{{#if system.Riding.check}}
+<div class="grid grid-2col underline">
+ <div class="flex flex-group-left"> 
+   <button type="rolldie" class="skill-roll rollable"  
+    data-roll="{d{{system.Riding.value}}x, 1d6x}kh+{{system.Riding.mod}}-{{system.wounds.value}}-{{system.exhaustion.value}}" 
+    data-label="{{localize 'FU.Skill.Riding'}}">
+    <img src="systems/furry-universe/css/ui/Die.png" alt="Roll" /></button>
+    <label for="system.skills.Riding" class="skill-name" data-label="{{system.Riding.value}}">
+    {{localize 'FU.Skill.Riding'}}({{localize 'FU.Ability.Dex.abbr'}})</label>
+  </div>
+  <div class="flex flex-group-right">
+    <select class="skill-dice" name="system.Riding.value" for="system.Riding.value" type="text">
+    {{selectOptions @root.FU.choice selected=system.Riding.value localize=true}}</select>
+    <span>+</span>
+    <input  class="skill-dice" name="system.Riding.mod" value="{{system.Riding.mod}}" type="text" />
+  </div>
+</div>
+ {{/if}}
+
+
+</div>
+
+{{!-- Mental Skills Bar --}}
+<div class="resource flex-group-center">
+
+      <li class='items-header items-list'>
+<label class="resource-label">{{localize 'FU.SkillsM'}}</label>
+  </li>
+
+
+    <div class="">
+
+  {{!-- Unskilled --}}
+<div class="grid grid-2col underline">
+ <div class="flex flex-group-left"> 
+   <button type="rolldie" class="skill-roll rollable"  
+    data-roll="{d{{system.Unskilled.int}}x, 1d6x}kh+{{system.Unskilled.modM}}-{{system.wounds.value}}-{{system.insanity.value}}" 
+    data-label="{{localize 'FU.Skill.Unskilled'}}">
+    <img src="systems/furry-universe/css/ui/Die.png" alt="Roll" /></button>
+    <label for="system.skills.Unskilled" class="skill-name" data-label="{{localize 'FU.Skill.Unskilled'}}">
+    {{localize 'FU.Skill.Unskilled'}}</label>
+  </div>
+  <div class="flex flex-group-right">
+      <select class="skill-dice" name="system.Unskilled.int" for="system.Unskilled.int" type="text">
+    {{selectOptions @root.FU.choice selected=system.unskilled.int localize=true}}</select>
+    <span>+</span>
+    <input  class="skill-dice" name="system.Unskilled.modM" value="{{system.Unskilled.modM}}" type="text" />
+  </div>
+</div>
+
+ 
+<!-- Investigation -->
+{{#if system.Investigation.check}}
+<div class="inv underline">
+ <div class="flex flex-group-left"> 
+   <button type="rolldie" class="skill-roll rollable"  
+    data-roll="{d{{system.Investigation.value}}x, 1d6x}kh+{{system.Investigation.mod}}-{{system.wounds.value}}-{{system.exhaustion.value}}" 
+    data-label="{{localize 'FU.Skill.Investigation'}}">
+    <img src="systems/furry-universe/css/ui/Die.png" alt="Roll" /></button>
+    <label for="system.skills.Investigation" class="skill-name" data-label="{{system.Investigation.value}}">
+    {{localize 'FU.Skill.Investigation'}}({{localize 'FU.Ability.Int.abbr'}})</label>
+  </div>
+  <div class="flex flex-group-right">
+    <select class="skill-dice" name="system.Investigation.value" for="system.Investigation.value" type="text">
+    {{selectOptions @root.FU.choice selected=system.Investigation.value localize=true}}</select>
+    <span>+</span>
+    <input  class="skill-dice" name="system.Investigation.mod" value="{{system.Investigation.mod}}" type="text" />
+  </div>
+</div>
+ {{/if}}
+
+<!-- Perception -->
+{{#if system.Perception.check}}
+<div class="inv underline">
+ <div class="flex flex-group-left"> 
+   <button type="rolldie" class="skill-roll rollable"  
+    data-roll="{d{{system.Perception.value}}x, 1d6x}kh+{{system.Perception.mod}}-{{system.wounds.value}}-{{system.exhaustion.value}}" 
+    data-label="{{localize 'FU.Skill.Perception'}}">
+    <img src="systems/furry-universe/css/ui/Die.png" alt="Roll" /></button>
+    <label for="system.skills.Perception" class="skill-name" data-label="{{system.Perception.value}}">
+    {{localize 'FU.Skill.Perception'}}({{localize 'FU.Ability.Int.abbr'}})</label>
+  </div>
+  <div class="flex flex-group-right">
+    <select class="skill-dice" name="system.Perception.value" for="system.Perception.value" type="text">
+    {{selectOptions @root.FU.choice selected=system.Perception.value localize=true}}</select>
+    <span>+</span>
+    <input  class="skill-dice" name="system.Perception.mod" value="{{system.Perception.mod}}" type="text" />
+  </div>
+</div>
+ {{/if}}
+<!-- Healing -->
+{{#if system.Healing.check}}
+<div class="inv underline">
+ <div class="flex flex-group-left"> 
+   <button type="rolldie" class="skill-roll rollable"  
+    data-roll="{d{{system.Healing.value}}x, 1d6x}kh+{{system.Healing.mod}}-{{system.wounds.value}}-{{system.exhaustion.value}}" 
+    data-label="{{localize 'FU.Skill.Healing'}}">
+    <img src="systems/furry-universe/css/ui/Die.png" alt="Roll" /></button>
+    <label for="system.skills.Healing" class="skill-name" data-label="{{system.Healing.value}}">
+    {{localize 'FU.Skill.Healing'}}({{localize 'FU.Ability.Int.abbr'}})</label>
+  </div>
+  <div class="flex flex-group-right">
+    <select class="skill-dice" name="system.Healing.value" for="system.Healing.value" type="text">
+    {{selectOptions @root.FU.choice selected=system.Healing.value localize=true}}</select>
+    <span>+</span>
+    <input  class="skill-dice" name="system.Healing.mod" value="{{system.Healing.mod}}" type="text" />
+  </div>
+</div>
+ {{/if}}
+
+<!-- Repair -->
+{{#if system.Repair.check}}
+<div class="inv underline">
+ <div class="flex flex-group-left"> 
+   <button type="rolldie" class="skill-roll rollable"  
+    data-roll="{d{{system.Repair.value}}x, 1d6x}kh+{{system.Repair.mod}}-{{system.wounds.value}}-{{system.exhaustion.value}}" 
+    data-label="{{localize 'FU.Skill.Repair'}}">
+    <img src="systems/furry-universe/css/ui/Die.png" alt="Roll" /></button>
+    <label for="system.skills.Repair" class="skill-name" data-label="{{system.Repair.value}}">
+    {{localize 'FU.Skill.Repair'}}({{localize 'FU.Ability.Int.abbr'}})</label>
+  </div>
+  <div class="flex flex-group-right">
+    <select class="skill-dice" name="system.Repair.value" for="system.Repair.value" type="text">
+    {{selectOptions @root.FU.choice selected=system.Repair.value localize=true}}</select>
+    <span>+</span>
+    <input  class="skill-dice" name="system.Repair.mod" value="{{system.Repair.mod}}" type="text" />
+  </div>
+</div>
+ {{/if}}
+<!-- Piloting -->
+{{#if system.Piloting.check}}
+<div class="inv underline">
+ <div class="flex flex-group-left"> 
+   <button type="rolldie" class="skill-roll rollable"  
+    data-roll="{d{{system.Piloting.value}}x, 1d6x}kh+{{system.Piloting.mod}}-{{system.wounds.value}}-{{system.exhaustion.value}}" 
+    data-label="{{localize 'FU.Skill.Piloting'}}">
+    <img src="systems/furry-universe/css/ui/Die.png" alt="Roll" /></button>
+    <label for="system.skills.Piloting" class="skill-name" data-label="{{system.Piloting.value}}">
+    {{localize 'FU.Skill.Piloting'}}({{localize 'FU.Ability.Int.abbr'}})</label>
+  </div>
+  <div class="flex flex-group-right">
+    <select class="skill-dice" name="system.Piloting.value" for="system.Piloting.value" type="text">
+    {{selectOptions @root.FU.choice selected=system.Piloting.value localize=true}}</select>
+    <span>+</span>
+    <input  class="skill-dice" name="system.Piloting.mod" value="{{system.Piloting.mod}}" type="text" />
+  </div>
+</div>
+ {{/if}}
+<!-- Survival -->
+{{#if system.Survival.check}}
+<div class="inv underline">
+ <div class="flex flex-group-left"> 
+   <button type="rolldie" class="skill-roll rollable"  
+    data-roll="{d{{system.Survival.value}}x, 1d6x}kh+{{system.Survival.mod}}-{{system.wounds.value}}-{{system.exhaustion.value}}" 
+    data-label="{{localize 'FU.Skill.Survival'}}">
+    <img src="systems/furry-universe/css/ui/Die.png" alt="Roll" /></button>
+    <label for="system.skills.Survival" class="skill-name" data-label="{{system.Survival.value}}">
+    {{localize 'FU.Skill.Survival'}}({{localize 'FU.Ability.Int.abbr'}})</label>
+  </div>
+  <div class="flex flex-group-right">
+    <select class="skill-dice" name="system.Survival.value" for="system.Survival.value" type="text">
+    {{selectOptions @root.FU.choice selected=system.Survival.value localize=true}}</select>
+    <span>+</span>
+    <input  class="skill-dice" name="system.Survival.mod" value="{{system.Survival.mod}}" type="text" />
+  </div>
+</div>
+ {{/if}}
+{{#if system.Hacking.check}}
+<div class="inv underline">
+  <div class="flex flex-group-left"> 
+    <button type="rolldie" class="skill-roll rollable"  
+      data-roll="{d{{system.Hacking.value}}x, 1d6x}kh+{{system.Hacking.mod}}-{{system.wounds.value}}-{{system.exhaustion.value}}" 
+      data-label="{{localize 'FU.Skill.Hacking'}}">
+      <img src="systems/furry-universe/css/ui/Die.png" alt="Roll" />
+    </button>
+    <label for="system.skills.Hacking" class="skill-name" data-label="{{system.Hacking.value}}">
+      {{localize 'FU.Skill.Hacking'}}({{localize 'FU.Ability.Int.abbr'}})
+    </label>
+  </div>
+  <div class="flex flex-group-right">
+    <select class="skill-dice" name="system.Hacking.value" for="system.Hacking.value" type="text">
+      {{selectOptions @root.FU.choice selected=system.Hacking.value localize=true}}
+    </select>
+    <span>+</span>
+    <input class="skill-dice" name="system.Hacking.mod" value="{{system.Hacking.mod}}" type="text" />
+  </div>
+</div>
+{{/if}}
+
+
+{{#if system.Navigation.check}}
+<div class="inv underline">
+  <div class="flex flex-group-left"> 
+    <button type="rolldie" class="skill-roll rollable"  
+      data-roll="{d{{system.Navigation.value}}x, 1d6x}kh+{{system.Navigation.mod}}-{{system.wounds.value}}-{{system.exhaustion.value}}" 
+      data-label="{{localize 'FU.Skill.Navigation'}}">
+      <img src="systems/furry-universe/css/ui/Die.png" alt="Roll" />
+    </button>
+    <label for="system.skills.Navigation" class="skill-name" data-label="{{system.Navigation.value}}">
+      {{localize 'FU.Skill.Navigation'}}({{localize 'FU.Ability.Int.abbr'}})
+    </label>
+  </div>
+  <div class="flex flex-group-right">
+    <select class="skill-dice" name="system.Navigation.value" for="system.Navigation.value" type="text">
+      {{selectOptions @root.FU.choice selected=system.Navigation.value localize=true}}
+    </select>
+    <span>+</span>
+    <input class="skill-dice" name="system.Navigation.mod" value="{{system.Navigation.mod}}" type="text" />
+  </div>
+</div>
+{{/if}}
+
+
+{{#if system.Spellcasting.check}}
+<div class="inv underline">
+  <div class="flex flex-group-left"> 
+    <button type="rolldie" class="skill-roll rollable"  
+      data-roll="{d{{system.Spellcasting.value}}x, 1d6x}kh+{{system.Spellcasting.mod}}-{{system.wounds.value}}-{{system.exhaustion.value}}" 
+      data-label="{{localize 'FU.Skill.Spellcasting'}}">
+      <img src="systems/furry-universe/css/ui/Die.png" alt="Roll" />
+    </button>
+    <label for="system.skills.Spellcasting" class="skill-name" data-label="{{system.Spellcasting.value}}">
+      {{localize 'FU.Skill.Spellcasting'}}({{localize 'FU.Ability.Int.abbr'}})
+    </label>
+  </div>
+  <div class="flex flex-group-right">
+    <select class="skill-dice" name="system.Spellcasting.value" for="system.Spellcasting.value" type="text">
+      {{selectOptions @root.FU.choice selected=system.Spellcasting.value localize=true}}
+    </select>
+    <span>+</span>
+    <input class="skill-dice" name="system.Spellcasting.mod" value="{{system.Spellcasting.mod}}" type="text" />
+  </div>
+</div>
+{{/if}}
+
+
+{{#if system.Trade.check}}
+<div class="inv underline">
+  <div class="flex flex-group-left"> 
+    <button type="rolldie" class="skill-roll rollable"  
+      data-roll="{d{{system.Trade.value}}x, 1d6x}kh+{{system.Trade.mod}}-{{system.wounds.value}}-{{system.exhaustion.value}}" 
+      data-label="{{localize 'FU.Skill.Trade'}}">
+      <img src="systems/furry-universe/css/ui/Die.png" alt="Roll" />
+    </button>
+    <label for="system.skills.Trade" class="skill-name" data-label="{{system.Trade.value}}">
+      {{localize 'FU.Skill.Trade'}}({{localize 'FU.Ability.Int.abbr'}})
+    </label>
+  </div>
+  <div class="flex flex-group-right">
+    <select class="skill-dice" name="system.Trade.value" for="system.Trade.value" type="text">
+      {{selectOptions @root.FU.choice selected=system.Trade.value localize=true}}
+    </select>
+    <span>+</span>
+    <input class="skill-dice" name="system.Trade.mod" value="{{system.Trade.mod}}" type="text" />
+  </div>
+</div>
+{{/if}}
+
+
+{{#if system.History.check}}
+<div class="inv underline">
+  <div class="flex flex-group-left"> 
+    <button type="rolldie" class="skill-roll rollable"  
+      data-roll="{d{{system.History.value}}x, 1d6x}kh+{{system.History.mod}}-{{system.wounds.value}}-{{system.exhaustion.value}}" 
+      data-label="{{localize 'FU.Skill.History'}}">
+      <img src="systems/furry-universe/css/ui/Die.png" alt="Roll" />
+    </button>
+    <label for="system.skills.History" class="skill-name" data-label="{{system.History.value}}">
+      {{localize 'FU.Skill.History'}}({{localize 'FU.Ability.Int.abbr'}})
+    </label>
+  </div>
+  <div class="flex flex-group-right">
+    <select class="skill-dice" name="system.History.value" for="system.History.value" type="text">
+      {{selectOptions @root.FU.choice selected=system.History.value localize=true}}
+    </select>
+    <span>+</span>
+    <input class="skill-dice" name="system.History.mod" value="{{system.History.mod}}" type="text" />
+  </div>
+</div>
+{{/if}}
+
+
+{{#if system.Cartography.check}}
+<div class="inv underline">
+  <div class="flex flex-group-left"> 
+    <button type="rolldie" class="skill-roll rollable"  
+      data-roll="{d{{system.Cartography.value}}x, 1d6x}kh+{{system.Cartography.mod}}-{{system.wounds.value}}-{{system.exhaustion.value}}" 
+      data-label="{{localize 'FU.Skill.Cartography'}}">
+      <img src="systems/furry-universe/css/ui/Die.png" alt="Roll" />
+    </button>
+    <label for="system.skills.Cartography" class="skill-name" data-label="{{system.Cartography.value}}">
+      {{localize 'FU.Skill.Cartography'}}({{localize 'FU.Ability.Int.abbr'}})
+    </label>
+  </div>
+  <div class="flex flex-group-right">
+    <select class="skill-dice" name="system.Cartography.value" for="system.Cartography.value" type="text">
+      {{selectOptions @root.FU.choice selected=system.Cartography.value localize=true}}
+    </select>
+    <span>+</span>
+    <input class="skill-dice" name="system.Cartography.mod" value="{{system.Cartography.mod}}" type="text" />
+  </div>
+</div>
+{{/if}}
+
+
+{{#if system.Space.check}}
+<div class="inv underline">
+  <div class="flex flex-group-left"> 
+    <button type="rolldie" class="skill-roll rollable"  
+      data-roll="{d{{system.Space.value}}x, 1d6x}kh+{{system.Space.mod}}-{{system.wounds.value}}-{{system.exhaustion.value}}" 
+      data-label="{{localize 'FU.Skill.Space'}}">
+      <img src="systems/furry-universe/css/ui/Die.png" alt="Roll" />
+    </button>
+    <label for="system.skills.Space" class="skill-name" data-label="{{system.Space.value}}">
+      {{localize 'FU.Skill.Space'}}({{localize 'FU.Ability.Int.abbr'}})
+    </label>
+  </div>
+  <div class="flex flex-group-right">
+    <select class="skill-dice" name="system.Space.value" for="system.Space.value" type="text">
+      {{selectOptions @root.FU.choice selected=system.Space.value localize=true}}
+    </select>
+    <span>+</span>
+    <input class="skill-dice" name="system.Space.mod" value="{{system.Space.mod}}" type="text" />
+  </div>
+</div>
+{{/if}}
+
+
+{{#if system.Art.check}}
+<div class="inv underline">
+  <div class="flex flex-group-left"> 
+    <button type="rolldie" class="skill-roll rollable"  
+      data-roll="{d{{system.Art.value}}x, 1d6x}kh+{{system.Art.mod}}-{{system.wounds.value}}-{{system.exhaustion.value}}" 
+      data-label="{{localize 'FU.Skill.Art'}}">
+      <img src="systems/furry-universe/css/ui/Die.png" alt="Roll" />
+    </button>
+    <label for="system.skills.Art" class="skill-name" data-label="{{system.Art.value}}">
+      {{localize 'FU.Skill.Art'}}({{localize 'FU.Ability.Int.abbr'}})
+    </label>
+  </div>
+  <div class="flex flex-group-right">
+    <select class="skill-dice" name="system.Art.value" for="system.Art.value" type="text">
+      {{selectOptions @root.FU.choice selected=system.Art.value localize=true}}
+    </select>
+    <span>+</span>
+    <input class="skill-dice" name="system.Art.mod" value="{{system.Art.mod}}" type="text" />
+  </div>
+</div>
+{{/if}}
+
+
+{{#if system.Tactic.check}}
+<div class="inv underline">
+  <div class="flex flex-group-left"> 
+    <button type="rolldie" class="skill-roll rollable"  
+      data-roll="{d{{system.Tactic.value}}x, 1d6x}kh+{{system.Tactic.mod}}-{{system.wounds.value}}-{{system.exhaustion.value}}" 
+      data-label="{{localize 'FU.Skill.Tactic'}}">
+      <img src="systems/furry-universe/css/ui/Die.png" alt="Roll" />
+    </button>
+    <label for="system.skills.Tactic" class="skill-name" data-label="{{system.Tactic.value}}">
+      {{localize 'FU.Skill.Tactic'}}({{localize 'FU.Ability.Int.abbr'}})
+    </label>
+  </div>
+  <div class="flex flex-group-right">
+    <select class="skill-dice" name="system.Tactic.value" for="system.Tactic.value" type="text">
+      {{selectOptions @root.FU.choice selected=system.Tactic.value localize=true}}
+    </select>
+    <span>+</span>
+    <input class="skill-dice" name="system.Tactic.mod" value="{{system.Tactic.mod}}" type="text" />
+  </div>
+</div>
+{{/if}}
+
+
+{{#if system.Technology.check}}
+<div class="inv underline">
+  <div class="flex flex-group-left"> 
+    <button type="rolldie" class="skill-roll rollable"  
+      data-roll="{d{{system.Technology.value}}x, 1d6x}kh+{{system.Technology.mod}}-{{system.wounds.value}}-{{system.exhaustion.value}}" 
+      data-label="{{localize 'FU.Skill.Technology'}}">
+      <img src="systems/furry-universe/css/ui/Die.png" alt="Roll" />
+    </button>
+    <label for="system.skills.Technology" class="skill-name" data-label="{{system.Technology.value}}">
+      {{localize 'FU.Skill.Technology'}}({{localize 'FU.Ability.Int.abbr'}})
+    </label>
+  </div>
+  <div class="flex flex-group-right">
+    <select class="skill-dice" name="system.Technology.value" for="system.Technology.value" type="text">
+      {{selectOptions @root.FU.choice selected=system.Technology.value localize=true}}
+    </select>
+    <span>+</span>
+    <input class="skill-dice" name="system.Technology.mod" value="{{system.Technology.mod}}" type="text" />
+  </div>
+</div>
+{{/if}}
+
+
+{{#if system.Arcane.check}}
+<div class="inv underline">
+  <div class="flex flex-group-left"> 
+    <button type="rolldie" class="skill-roll rollable"  
+      data-roll="{d{{system.Arcane.value}}x, 1d6x}kh+{{system.Arcane.mod}}-{{system.wounds.value}}-{{system.exhaustion.value}}" 
+      data-label="{{localize 'FU.Skill.Arcane'}}">
+      <img src="systems/furry-universe/css/ui/Die.png" alt="Roll" />
+    </button>
+    <label for="system.skills.Arcane" class="skill-name" data-label="{{system.Arcane.value}}">
+      {{localize 'FU.Skill.Arcane'}}({{localize 'FU.Ability.Int.abbr'}})
+    </label>
+  </div>
+  <div class="flex flex-group-right">
+    <select class="skill-dice" name="system.Arcane.value" for="system.Arcane.value" type="text">
+      {{selectOptions @root.FU.choice selected=system.Arcane.value localize=true}}
+    </select>
+    <span>+</span>
+    <input class="skill-dice" name="system.Arcane.mod" value="{{system.Arcane.mod}}" type="text" />
+  </div>
+</div>
+{{/if}}
+
+
+{{#if system.Medicine.check}}
+<div class="inv underline">
+  <div class="flex flex-group-left"> 
+    <button type="rolldie" class="skill-roll rollable"  
+      data-roll="{d{{system.Medicine.value}}x, 1d6x}kh+{{system.Medicine.mod}}-{{system.wounds.value}}-{{system.exhaustion.value}}" 
+      data-label="{{localize 'FU.Skill.Medicine'}}">
+      <img src="systems/furry-universe/css/ui/Die.png" alt="Roll" />
+    </button>
+    <label for="system.skills.Medicine" class="skill-name" data-label="{{system.Medicine.value}}">
+      {{localize 'FU.Skill.Medicine'}}({{localize 'FU.Ability.Int.abbr'}})
+    </label>
+  </div>
+  <div class="flex flex-group-right">
+    <select class="skill-dice" name="system.Medicine.value" for="system.Medicine.value" type="text">
+      {{selectOptions @root.FU.choice selected=system.Medicine.value localize=true}}
+    </select>
+    <span>+</span>
+    <input class="skill-dice" name="system.Medicine.mod" value="{{system.Medicine.mod}}" type="text" />
+  </div>
+</div>
+{{/if}}
+
+
+{{#if system.Nature.check}}
+<div class="inv underline">
+  <div class="flex flex-group-left"> 
+    <button type="rolldie" class="skill-roll rollable"  
+      data-roll="{d{{system.Nature.value}}x, 1d6x}kh+{{system.Nature.mod}}-{{system.wounds.value}}-{{system.exhaustion.value}}" 
+      data-label="{{localize 'FU.Skill.Nature'}}">
+      <img src="systems/furry-universe/css/ui/Die.png" alt="Roll" />
+    </button>
+    <label for="system.skills.Nature" class="skill-name" data-label="{{system.Nature.value}}">
+      {{localize 'FU.Skill.Nature'}}({{localize 'FU.Ability.Int.abbr'}})
+    </label>
+  </div>
+  <div class="flex flex-group-right">
+    <select class="skill-dice" name="system.Nature.value" for="system.Nature.value" type="text">
+      {{selectOptions @root.FU.choice selected=system.Nature.value localize=true}}
+    </select>
+    <span>+</span>
+    <input class="skill-dice" name="system.Nature.mod" value="{{system.Nature.mod}}" type="text" />
+  </div>
+</div>
+{{/if}}
+
+
+{{#if system.Science.check}}
+<div class="inv underline">
+  <div class="flex flex-group-left"> 
+    <button type="rolldie" class="skill-roll rollable"  
+      data-roll="{d{{system.Science.value}}x, 1d6x}kh+{{system.Science.mod}}-{{system.wounds.value}}-{{system.exhaustion.value}}" 
+      data-label="{{localize 'FU.Skill.Science'}}">
+      <img src="systems/furry-universe/css/ui/Die.png" alt="Roll" />
+    </button>
+    <label for="system.skills.Science" class="skill-name" data-label="{{system.Science.value}}">
+      {{localize 'FU.Skill.Science'}}({{localize 'FU.Ability.Int.abbr'}})
+    </label>
+  </div>
+  <div class="flex flex-group-right">
+    <select class="skill-dice" name="system.Science.value" for="system.Science.value" type="text">
+      {{selectOptions @root.FU.choice selected=system.Science.value localize=true}}
+    </select>
+    <span>+</span>
+    <input class="skill-dice" name="system.Science.mod" value="{{system.Science.mod}}" type="text" />
+  </div>
+</div>
+{{/if}}
+
+
+{{#if system.Occult.check}}
+<div class="inv underline">
+  <div class="flex flex-group-left"> 
+    <button type="rolldie" class="skill-roll rollable"  
+      data-roll="{d{{system.Occult.value}}x, 1d6x}kh+{{system.Occult.mod}}-{{system.wounds.value}}-{{system.exhaustion.value}}" 
+      data-label="{{localize 'FU.Skill.Occult'}}">
+      <img src="systems/furry-universe/css/ui/Die.png" alt="Roll" />
+    </button>
+    <label for="system.skills.Occult" class="skill-name" data-label="{{system.Occult.value}}">
+      {{localize 'FU.Skill.Occult'}}({{localize 'FU.Ability.Int.abbr'}})
+    </label>
+  </div>
+  <div class="flex flex-group-right">
+    <select class="skill-dice" name="system.Occult.value" for="system.Occult.value" type="text">
+      {{selectOptions @root.FU.choice selected=system.Occult.value localize=true}}
+    </select>
+    <span>+</span>
+    <input class="skill-dice" name="system.Occult.mod" value="{{system.Occult.mod}}" type="text" />
+  </div>
+</div>
+{{/if}}
+
+
+{{#if system.Politic.check}}
+<div class="inv underline">
+  <div class="flex flex-group-left"> 
+    <button type="rolldie" class="skill-roll rollable"  
+      data-roll="{d{{system.Politic.value}}x, 1d6x}kh+{{system.Politic.mod}}-{{system.wounds.value}}-{{system.exhaustion.value}}" 
+      data-label="{{localize 'FU.Skill.Politic'}}">
+      <img src="systems/furry-universe/css/ui/Die.png" alt="Roll" />
+    </button>
+    <label for="system.skills.Politic" class="skill-name" data-label="{{system.Politic.value}}">
+      {{localize 'FU.Skill.Politic'}}({{localize 'FU.Ability.Int.abbr'}})
+    </label>
+  </div>
+  <div class="flex flex-group-right">
+    <select class="skill-dice" name="system.Politic.value" for="system.Politic.value" type="text">
+      {{selectOptions @root.FU.choice selected=system.Politic.value localize=true}}
+    </select>
+    <span>+</span>
+    <input class="skill-dice" name="system.Politic.mod" value="{{system.Politic.mod}}" type="text" />
+  </div>
+</div>
+{{/if}}
+
+
+{{#if system.Underworld.check}}
+<div class="inv underline">
+  <div class="flex flex-group-left"> 
+    <button type="rolldie" class="skill-roll rollable"  
+      data-roll="{d{{system.Underworld.value}}x, 1d6x}kh+{{system.Underworld.mod}}-{{system.wounds.value}}-{{system.exhaustion.value}}" 
+      data-label="{{localize 'FU.Skill.Underworld'}}">
+      <img src="systems/furry-universe/css/ui/Die.png" alt="Roll" />
+    </button>
+    <label for="system.skills.Underworld" class="skill-name" data-label="{{system.Underworld.value}}">
+      {{localize 'FU.Skill.Underworld'}}({{localize 'FU.Ability.Int.abbr'}})
+    </label>
+  </div>
+  <div class="flex flex-group-right">
+    <select class="skill-dice" name="system.Underworld.value" for="system.Underworld.value" type="text">
+      {{selectOptions @root.FU.choice selected=system.Underworld.value localize=true}}
+    </select>
+    <span>+</span>
+    <input class="skill-dice" name="system.Underworld.mod" value="{{system.Underworld.mod}}" type="text" />
+  </div>
+</div>
+{{/if}}
+
+
+{{#if system.Religion.check}}
+<div class="inv underline">
+  <div class="flex flex-group-left"> 
+    <button type="rolldie" class="skill-roll rollable"  
+      data-roll="{d{{system.Religion.value}}x, 1d6x}kh+{{system.Religion.mod}}-{{system.wounds.value}}-{{system.exhaustion.value}}" 
+      data-label="{{localize 'FU.Skill.Religion'}}">
+      <img src="systems/furry-universe/css/ui/Die.png" alt="Roll" />
+    </button>
+    <label for="system.skills.Religion" class="skill-name" data-label="{{system.Religion.value}}">
+      {{localize 'FU.Skill.Religion'}}({{localize 'FU.Ability.Int.abbr'}})
+    </label>
+  </div>
+  <div class="flex flex-group-right">
+    <select class="skill-dice" name="system.Religion.value" for="system.Religion.value" type="text">
+      {{selectOptions @root.FU.choice selected=system.Religion.value localize=true}}
+    </select>
+    <span>+</span>
+    <input class="skill-dice" name="system.Religion.mod" value="{{system.Religion.mod}}" type="text" />
+  </div>
+</div>
+{{/if}}
+    
+    </div>
+</div>
+
+{{!-- Social Skills Bar --}}
+<div class="resource flex-group-center">
+      <li class='items-header items-list'>
+<label class="resource-label">{{localize 'FU.SkillsS'}}</label>
+  </li>
+  
+
+
+  {{!-- Unskilled --}}
+<div class="grid grid-2col underline">
+ <div class="flex flex-group-left"> 
+   <button type="rolldie" class="skill-roll rollable"  
+    data-roll="{d{{system.Unskilled.spi}}x, 1d6x}kh+{{system.Unskilled.modS}}-{{system.wounds.value}}-{{system.insanity.value}}" 
+    data-label="{{localize 'FU.Skill.Unskilled'}}">
+    <img src="systems/furry-universe/css/ui/Die.png" alt="Roll" /></button>
+    <label for="system.skills.Unskilled" class="skill-name" data-label="{{localize 'FU.Skill.Unskilled'}}">
+    {{localize 'FU.Skill.Unskilled'}}</label>
+  </div>
+  <div class="flex flex-group-right">
+      <select class="skill-dice" name="system.Unskilled.spi" for="system.Unskilled.spi" type="text">
+    {{selectOptions @root.FU.choice selected=system.Unskilled.spi localize=true}}</select>
+    <span>+</span>
+    <input  class="skill-dice" name="system.Unskilled.modS" value="{{system.Unskilled.modS}}" type="text" />
+  </div>
+</div>
+
+   {{#if system.Faith.check}}
+<div class="inv underline">
+  <div class="flex flex-group-left"> 
+    <button type="rolldie" class="skill-roll rollable"  
+      data-roll="{d{{system.Faith.value}}x, 1d6x}kh+{{system.Faith.mod}}-{{system.wounds.value}}-{{system.exhaustion.value}}" 
+      data-label="{{localize 'FU.Skill.Faith'}}">
+      <img src="systems/furry-universe/css/ui/Die.png" alt="Roll" />
+    </button>
+    <label for="system.skills.Faith" class="skill-name" data-label="{{system.Faith.value}}">
+      {{localize 'FU.Skill.Faith'}}({{localize 'FU.Ability.Spi.abbr'}})
+    </label>
+  </div>
+  <div class="flex flex-group-right">
+    <select class="skill-dice" name="system.Faith.value" for="system.Faith.value" type="text">
+      {{selectOptions @root.FU.choice selected=system.Faith.value localize=true}}
+    </select>
+    <span>+</span>
+    <input class="skill-dice" name="system.Faith.mod" value="{{system.Faith.mod}}" type="text" />
+  </div>
+</div>
+{{/if}}
+{{#if system.Taming.check}}
+<div class="inv underline">
+  <div class="flex flex-group-left"> 
+    <button type="rolldie" class="skill-roll rollable"  
+      data-roll="{d{{system.Taming.value}}x, 1d6x}kh+{{system.Taming.mod}}-{{system.wounds.value}}-{{system.exhaustion.value}}" 
+      data-label="{{localize 'FU.Skill.Taming'}}">
+      <img src="systems/furry-universe/css/ui/Die.png" alt="Roll" />
+    </button>
+    <label for="system.skills.Taming" class="skill-name" data-label="{{system.Taming.value}}">
+      {{localize 'FU.Skill.Taming'}}({{localize 'FU.Ability.Spi.abbr'}})
+    </label>
+  </div>
+  <div class="flex flex-group-right">
+    <select class="skill-dice" name="system.Taming.value" for="system.Taming.value" type="text">
+      {{selectOptions @root.FU.choice selected=system.Taming.value localize=true}}
+    </select>
+    <span>+</span>
+    <input class="skill-dice" name="system.Taming.mod" value="{{system.Taming.mod}}" type="text" />
+  </div>
+</div>
+{{/if}}
+{{#if system.Persuasion.check}}
+<div class="inv underline">
+  <div class="flex flex-group-left"> 
+    <button type="rolldie" class="skill-roll rollable"  
+      data-roll="{d{{system.Persuasion.value}}x, 1d6x}kh+{{system.Persuasion.mod}}-{{system.wounds.value}}-{{system.exhaustion.value}}" 
+      data-label="{{localize 'FU.Skill.Persuasion'}}">
+      <img src="systems/furry-universe/css/ui/Die.png" alt="Roll" />
+    </button>
+    <label for="system.skills.Persuasion" class="skill-name" data-label="{{system.Persuasion.value}}">
+      {{localize 'FU.Skill.Persuasion'}}({{localize 'FU.Ability.Spi.abbr'}})
+    </label>
+  </div>
+  <div class="flex flex-group-right">
+    <select class="skill-dice" name="system.Persuasion.value" for="system.Persuasion.value" type="text">
+      {{selectOptions @root.FU.choice selected=system.Persuasion.value localize=true}}
+    </select>
+    <span>+</span>
+    <input class="skill-dice" name="system.Persuasion.mod" value="{{system.Persuasion.mod}}" type="text" />
+  </div>
+</div>
+{{/if}}
+{{#if system.Psionic.check}}
+<div class="inv underline">
+  <div class="flex flex-group-left"> 
+    <button type="rolldie" class="skill-roll rollable"  
+      data-roll="{d{{system.Psionic.value}}x, 1d6x}kh+{{system.Psionic.mod}}-{{system.wounds.value}}-{{system.exhaustion.value}}" 
+      data-label="{{localize 'FU.Skill.Psionic'}}">
+      <img src="systems/furry-universe/css/ui/Die.png" alt="Roll" />
+    </button>
+    <label for="system.skills.Psionic" class="skill-name" data-label="{{system.Psionic.value}}">
+      {{localize 'FU.Skill.Psionic'}}({{localize 'FU.Ability.Spi.abbr'}})
+    </label>
+  </div>
+  <div class="flex flex-group-right">
+    <select class="skill-dice" name="system.Psionic.value" for="system.Psionic.value" type="text">
+      {{selectOptions @root.FU.choice selected=system.Psionic.value localize=true}}
+    </select>
+    <span>+</span>
+    <input class="skill-dice" name="system.Psionic.mod" value="{{system.Psionic.mod}}" type="text" />
+  </div>
+</div>
+{{/if}}
+{{#if system.Perform.check}}
+<div class="inv underline">
+  <div class="flex flex-group-left"> 
+    <button type="rolldie" class="skill-roll rollable"  
+      data-roll="{d{{system.Perform.value}}x, 1d6x}kh+{{system.Perform.mod}}-{{system.wounds.value}}-{{system.exhaustion.value}}" 
+      data-label="{{localize 'FU.Skill.Perform'}}">
+      <img src="systems/furry-universe/css/ui/Die.png" alt="Roll" />
+    </button>
+    <label for="system.skills.Perform" class="skill-name" data-label="{{system.Perform.value}}">
+      {{localize 'FU.Skill.Perform'}}({{localize 'FU.Ability.Spi.abbr'}})
+    </label>
+  </div>
+  <div class="flex flex-group-right">
+    <select class="skill-dice" name="system.Perform.value" for="system.Perform.value" type="text">
+      {{selectOptions @root.FU.choice selected=system.Perform.value localize=true}}
+    </select>
+    <span>+</span>
+    <input class="skill-dice" name="system.Perform.mod" value="{{system.Perform.mod}}" type="text" />
+  </div>
+</div>
+{{/if}}
+{{#if system.Intimidation.check}}
+<div class="inv underline">
+  <div class="flex flex-group-left"> 
+    <button type="rolldie" class="skill-roll rollable"  
+      data-roll="{d{{system.Intimidation.value}}x, 1d6x}kh+{{system.Intimidation.mod}}-{{system.wounds.value}}-{{system.exhaustion.value}}" 
+      data-label="{{localize 'FU.Skill.Intimidation'}}">
+      <img src="systems/furry-universe/css/ui/Die.png" alt="Roll" />
+    </button>
+    <label for="system.skills.Intimidation" class="skill-name" data-label="{{system.Intimidation.value}}">
+      {{localize 'FU.Skill.Intimidation'}}({{localize 'FU.Ability.Spi.abbr'}})
+    </label>
+  </div>
+  <div class="flex flex-group-right">
+    <select class="skill-dice" name="system.Intimidation.value" for="system.Intimidation.value" type="text">
+      {{selectOptions @root.FU.choice selected=system.Intimidation.value localize=true}}
+    </select>
+    <span>+</span>
+    <input class="skill-dice" name="system.Intimidation.mod" value="{{system.Intimidation.mod}}" type="text" />
+  </div>
+</div>
+{{/if}}
+{{#if system.Bluff.check}}
+<div class="inv underline">
+  <div class="flex flex-group-left"> 
+    <button type="rolldie" class="skill-roll rollable"  
+      data-roll="{d{{system.Bluff.value}}x, 1d6x}kh+{{system.Bluff.mod}}-{{system.wounds.value}}-{{system.exhaustion.value}}" 
+      data-label="{{localize 'FU.Skill.Bluff'}}">
+      <img src="systems/furry-universe/css/ui/Die.png" alt="Roll" />
+    </button>
+    <label for="system.skills.Bluff" class="skill-name" data-label="{{system.Bluff.value}}">
+      {{localize 'FU.Skill.Bluff'}}({{localize 'FU.Ability.Spi.abbr'}})
+    </label>
+  </div>
+  <div class="flex flex-group-right">
+    <select class="skill-dice" name="system.Bluff.value" for="system.Bluff.value" type="text">
+      {{selectOptions @root.FU.choice selected=system.Bluff.value localize=true}}
+    </select>
+    <span>+</span>
+    <input class="skill-dice" name="system.Bluff.mod" value="{{system.Bluff.mod}}" type="text" />
+  </div>
+</div>
+{{/if}}
+
+{{#if system.Rituals.check}}
+<div class="inv underline">
+  <div class="flex flex-group-left"> 
+    <button type="rolldie" class="skill-roll rollable"  
+      data-roll="{d{{system.Rituals.value}}x, 1d6x}kh+{{system.Rituals.mod}}-{{system.wounds.value}}-{{system.exhaustion.value}}" 
+      data-label="{{localize 'FU.Skill.Rituals'}}">
+      <img src="systems/furry-universe/css/ui/Die.png" alt="Roll" />
+    </button>
+    <label for="system.skills.Rituals" class="skill-name" data-label="{{system.Rituals.value}}">
+      {{localize 'FU.Skill.Rituals'}}({{localize 'FU.Ability.Spi.abbr'}})
+    </label>
+  </div>
+  <div class="flex flex-group-right">
+    <select class="skill-dice" name="system.Rituals.value" for="system.Rituals.value" type="text">
+      {{selectOptions @root.FU.choice selected=system.Rituals.value localize=true}}
+    </select>
+    <span>+</span>
+    <input class="skill-dice" name="system.Rituals.mod" value="{{system.Rituals.mod}}" type="text" />
+  </div>
+</div>
+{{/if}}
+      </div>
+</div>
+

@@ -1,0 +1,34 @@
+<form class="{{cssClass}}" autocomplete="off">
+  <header class="sheet-header">
+    
+    <div class="bio-caption"> 
+    <label style="width:200px">{{localize 'FU.HindranceType'}}</label>
+    <label style="width:200px">{{localize 'FU.Name'}}</label>
+    </div>
+
+    <div class="bio-input"> 
+    <select  style="width:200px" name="system.advancetype" for="system.advancetype" type="text">
+        {{selectOptions @root.FU.Hindrance selected=system.advancetype localize=true}} </select>
+    <input style="width:200px" name="name" type="text" value="{{item.name}}" placeholder="Name"/>
+    </div>
+  </header>
+
+
+
+  {{!-- Sheet Tab Navigation --}}
+  <nav class="sheet-tabs tabs" data-group="primary">
+    <a class="item" data-tab="description">Description</a>
+  </nav>
+
+  {{!-- Sheet Body --}}
+  <section class="sheet-body">
+
+    {{!-- Description Tab --}}
+    <div class="tab" data-group="primary" data-tab="description">
+      {{!-- Editors must receive enriched text data from getData to properly handle rolls --}}
+      {{editor enrichedDescription target="system.description" engine="prosemirror" button=true editable=editable}}
+    </div>
+
+
+  </section>
+  </form>

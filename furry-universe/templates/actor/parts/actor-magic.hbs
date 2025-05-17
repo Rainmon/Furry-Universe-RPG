@@ -1,0 +1,105 @@
+     
+{{!-- Header --}}
+<label class="ability-label">{{localize 'FU.Powers'}}</label>
+  <div class="bio-caption">
+    <label style="width:200px" class="resource-label">{{localize 'FU.ArcaneBackground'}}</label>
+    <label style="width:150px" class="resource-label">{{localize 'FU.MagicSkill'}}</label>
+    <label style="width:50px" for="system.magic.max" class="resource-label">{{localize 'FU.MaxMana'}}</label>
+    <label style="width:50px" for="system.power.max" class="resource-label">{{localize 'FU.MaxPower'}}</label>
+    <label style="width:300px" class="resource-label">{{localize 'FU.Schools'}}</label>
+ </div>
+<div class="bio-input">
+    <select  style="width:200px" name="system.ArcaneBackground" for="system.ArcaneBackground" type="text">
+        {{selectOptions @root.FU.AB selected=system.ArcaneBackground localize=true}} </select>
+    <select  style="width:150px" name="system.ArcaneSkill" for="system.ArcaneSkill" type="text">
+        {{selectOptions @root.FU.Magic selected=system.ArcaneSkill localize=true}} </select>
+    <input style="width:50px" type="text" name="system.magic.max" value="{{system.magic.max}}" data-dtype="Number"/>
+    <input style="width:50px" type="text" name="system.power.max" value="{{system.power.max}}" data-dtype="Number"/>
+    <input style="width:300px" type="text" name="system.schools.known" value="{{system.schools.known}}" data-dtype="Text"/>
+</div>
+<details>
+  <summary>{{localize 'FU.Description'}}</summary>
+   <div class="frame" style="height:150px; margin-top:10px"> 
+      {{editor enrichedNotes target="system.Notes" engine="prosemirror" button=true editable=editable}}
+      </div>
+</details>
+{{!-- Spell list Header --}}
+  <div class="frame" style="height:fit-content">
+    <ol class='items-list'>
+     <li class='item flexrow items-header'>
+<div class="bio-caption">
+  <label class="resource" style="width:100px">{{localize 'FU.Name'}}</label>
+  <label class="resource" style="width:90px">{{localize 'FU.Rank'}}</label>
+  <label class="resource" style="width:90px">{{localize 'FU.Range'}}</label>
+  <label class="resource" style="width:90px">{{localize 'FU.Target'}}</label>
+  <label class="resource" style="width:35px">{{localize 'FU.Cost'}}</label>
+  <label class="resource" style="width:25px">{{localize 'FU.Power'}}</label>
+  <label class="resource" style="width:80px">{{localize 'FU.Duration'}}</label>
+  <label class="resource" style="width:80px">{{localize 'FU.Damage'}}</label>
+</div>
+  
+
+  </li>
+{{!-- Spell List --}}
+  {{#each spells as |item id|}}
+    <li class='item flexrow' data-item-id='{{item._id}}'>
+      <div class='item-name'>
+        {{!-- Spell Icon and Send to Chat --}}
+        <div class='item-image'>
+          <a class='rollable' data-roll-type='item'> <img src='{{item.img}}' title='{{localize 'FU.SendToChat'}}' width='25' height='25'/></a>
+        </div>
+          {{!-- Colimn Names --}}
+        <div class="spell-display">
+        <label class="resource spell-display" style="width:110px">{{item.name}}</label>
+
+        <select disabled class="prevent-select spell-display" style="width:100px">          
+            {{selectOptions @root.FU.Rank selected=system.rank localize=true}}</select>
+
+         <select disabled class="prevent-select spell-display" style="width:100px">
+            {{selectOptions @root.FU.Range selected=system.range localize=true}}</select>
+
+         <label class="resource spell-display" style="width:90px">{{system.target}}</label>
+         <label class="resource" style="width:40px">{{system.cost}}</label>
+         <label class="resource" style="width:50px">{{system.power}}</label>
+         <label class="resource" style="width:80px">{{system.duration}}</label>
+         {{#if (eq system.addability "stat")}}
+          <label class="resource" name="system.damage" style="width:85px">{{system.aability}}+{{system.damage}}{{localize 'FU.S'}} <button type="rolldie" class="skill-roll rollable" 
+           data-roll-type='statdamage'data-label="{{item.name}} {{localize 'FU.Damage'}}"><img src="systems/furry-universe/css/ui/Die.png" alt="Roll" />
+          </button></label>
+         {{/if}}
+         {{#if (eq system.addability "flat")}}
+           <label class="resource" name="system.damage" style="width:85px">{{system.damage}}{{localize 'FU.S'}} <button type="rolldie" class="skill-roll rollable" 
+           data-roll-type='damage'data-label="{{item.name}} {{localize 'FU.Damage'}}"><img src="systems/furry-universe/css/ui/Die.png" alt="Roll" />
+          </button></label>
+           {{/if}}
+           
+      
+      <div class='item-controls' style="width:50px">
+        <a class='item-control item-edit'
+          title='{{localize "DOCUMENT.Edit" type='spell'}}'>
+          <i class='fas fa-edit'></i> </a>
+        <a class='item-control item-delete'
+          title='{{localize "DOCUMENT.Delete" type='spell'}}'>
+          <i class='fas fa-trash'></i> </a>
+      </div>
+        </div>
+      </div>
+    </li>
+       <details>
+ <summary style="list-style:">
+  {{localize 'FU.Description'}}
+    </summary>
+   <div class="frame" style="height:auto"> 
+    <div>{{{system.description}}} </div>
+      </div>
+</details>
+  {{/each}}
+
+        <div class='item-controls'>
+      <a class='item-control item-create' title='Create item' data-type='spell'>
+        {{localize 'FU.AddNew'}}
+      </a>
+    </div>
+</ol>
+
+      </div>

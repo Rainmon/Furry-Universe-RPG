@@ -1,0 +1,18 @@
+{
+  "name": "furry-universe",
+  "version": "2.0.0",
+  "description": "CSS compiler for the FurryUniverse system",
+  "scripts": {
+    "build": "sass src/scss/furry-universe.scss css/furry-universe.css --style=expanded --no-source-map",
+    "watch": "sass src/scss/furry-universe.scss css/furry-universe.css --style=expanded --source-map --watch"
+  },
+  "browserslist": [
+    "last 3 versions"
+  ],
+  "author": "Rain",
+  "license": "MIT",
+  "private": true,
+  "devDependencies": {
+    "sass": "^1.53.0"
+  }
+}

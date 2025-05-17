@@ -1,0 +1,330 @@
+<form class="{{cssClass}} {{actor.type}} bg-main sheet-size" autocomplete="off">
+
+
+ {{!-- Name, Bio, and Passives --}}
+<header >
+  {{!-- Hidden Magic Section: Shows only when max mana >0 --}}
+   {{#if system.magic.check}}
+<div class="magic-section grid grid-5col">
+          <div>
+            <label>{{localize 'FU.SustainedSpells'}}</label>
+            <input style="width:30px" type="text" name="system.spells.value" value="{{system.spells.value}}" data-dtype="Number"/>
+          </div>
+          <div class="resource flex-group-right">
+             <label for="system.power.value" class="resource-label">{{localize 'FU.power'}} <input type="text" style="width:30px" name="system.power.value" value="{{system.power.value}}" data-dtype="Number"/>/{{system.power.max}}</label>    
+           </div>
+           <div class="resource flex-group-left">
+             <div class="bar bar-progress bar-empty">
+            <div class="bar-progress-bar bar-mp"
+                 style="width: {{calculatePercentage system.magic.value system.magic.max}};">
+            </div>
+            </div>           
+          <div class="resource-content flexrow flex-center flex-between"> 
+          </div>
+           </div>
+           <div>
+            <label for="system.magic.value" class="resource-label"><input type="text" style="width:30px" name="system.magic.value" value="{{system.magic.value}}" data-dtype="Number"/>/{{system.magic.max}} {{localize 'FU.magic'}} </label>
+           </div>
+           <div>
+              <input style="width:30px" type="text" name="system.schools.value" value="{{system.schools.value}}" data-dtype="Number"/>
+              <label>{{localize 'FU.ManaBurn'}}</label>
+           </div>
+  </div>  
+ {{/if}}
+{{!-- Header --}}
+<div class="bio-section">
+  <div  class="sheet-section-wide"> 
+    <div class="bio-section">
+  <h2 class="charname" style="width:200px;"><input name="name" type="text" value="{{actor.name}}" placeholder="Name"/></h2> 
+  <label>{{localize 'FU.Bennies'}}</label>
+  <input style="width:25px" type="text" name="system.attributes.luck" value="{{system.attributes.luck}}" data-dtype="Number"/>
+    </div>
+    <div>
+  <div class="bio-input">
+<input style="width:120px" type="text" name="system.race" value="{{system.race}}" data-dtype="text"/>
+<input style="width:120px" type="text" name="system.gender" value="{{system.gender}}" data-dtype="text"/>
+<input style="width:50px" type="text" name="system.age" value="{{system.age}}" data-dtype="Number"/>
+</div>
+  <div class="bio-caption">
+<label style="width:120px">{{localize 'FU.Race'}}</label>
+<label style="width:120px">{{localize 'FU.Gender'}}</label>
+<label style="width:50px">{{localize 'FU.Age'}}</label>
+</div>
+  <div class="bio-input">
+<input style="width:120px" type="text" name="system.archetype" value="{{system.archetype}}" data-dtype="text"/>
+<input style="width:55px" type="text" name="system.height" value="{{system.height}}" data-dtype="text"/>
+<input style="width:55px" type="text" name="system.weight" value="{{system.weight}}" data-dtype="text"/>
+<input style="width:55px" type="text" name="system.eyes" value="{{system.eyes}}" data-dtype="text"/>
+</div>
+  <div class="bio-caption">
+<label style="width:120px">{{localize 'FU.Archetype'}}</label>
+<label style="width:55px">{{localize 'FU.Height'}}</label>
+<label style="width:55px">{{localize 'FU.Weight'}}</label>
+<label style="width:55px">{{localize 'FU.Eyes'}}</label>
+</div>
+<div class="bio-input">
+<input style="width:120px" type="text" name="system.funds.gold" value="{{system.funds.gold}}" data-dtype="Number"/>
+<input style="width:55px" type="text" name="system.encumbrance.value" value="{{system.encumbrance.value}}" data-dtype="Number"/>
+<span>/</span>
+<input style="width:55px" type="text" name="system.encumbrance.max" value="{{system.encumbrance.max}}" data-dtype="Number"/>
+<input style="width:55px" type="text" name="system.size" value="{{system.size}}" data-dtype="Number"/>
+</div>
+  <div class="bio-caption">
+<label style="width:120px">{{localize 'FU.Money'}}</label>
+<label style="width:55px">{{localize 'FU.Encumbrance'}}</label>
+<label style="width:55px"></label>
+<label style="width:55px">{{localize 'FU.Size'}}</label>
+</div>
+      </div>
+    </div>
+
+  <div class="profile-img">
+    <img   src="{{actor.img}}" data-edit="img" title="{{actor.name}}"/> 
+    </div>
+
+
+  <div class="sheet-section-wide">
+    <div class="grid grid-2col">
+      <div>
+        <label>{{localize 'FU.Xp'}}</label>
+        <input style="width:30px" type="text" name="system.attributes.xp.value" value="{{system.attributes.xp.value}}" data-dtype="Number"/>
+        <label>{{localize 'FU.Level'}}</label>
+        <input style="width:30px" type="text" name="system.attributes.level.value" value="{{system.attributes.level.value}}" data-dtype="text"/>
+      </div>
+      <div>
+        <label for="system.attributes.rank">{{localize 'FU.Rank'}}</label>
+        <input style="width:100px" type="text" name="system.attributes.rank" value="{{system.attributes.rank}}" data-dtype="text"/>
+      </div>
+    </div>
+    <div class="passives">
+      <div class="passive-1">
+        <input  type="text" name="system.notice" value="{{system.notice}}" data-dtype="text" data-tooltip="{{localize 'FU.Tooltip.Notice'}}"/>
+        <label style="font-size: x-small">{{localize 'FU.Notice'}}</label>
+      </div>
+      <div class="passive-1">
+        <input  type="text" name="system.defense" value="{{system.defense}}" data-dtype="text" data-tooltip="{{localize 'FU.Tooltip.Defense'}}"/>
+        <label style="font-size: x-small">{{localize 'FU.defense'}}</label></div>
+              <div class="passive-1">
+        <input  type="text" name="system.firewall" value="{{system.firewall}}" data-dtype="text" data-tooltip="{{localize 'FU.Tooltip.Firewall'}}"/>
+        <label style="font-size: x-small">{{localize 'FU.Firewall'}}</label></div>
+    </div>
+    <div class="passives">
+      <div class="passive-1">
+        <input  type="text" name="system.speed" value="{{system.speed}}" data-dtype="text" data-tooltip="{{localize 'FU.Tooltip.Speed'}}"/>
+        <label style="font-size: x-small">{{localize 'FU.Speed'}}</label></div>
+      <div class="passive-1">
+        <input  type="text" name="system.toughtness" value="{{system.toughtness}}" data-dtype="text" data-tooltip="{{localize 'FU.Tooltip.Toughtness'}}"/>
+        <label style="font-size: x-small">{{localize 'FU.Toughtness'}}</label></div>
+      <div class="passive-1">
+        <input  type="text" name="system.willpower" value="{{system.willpower}}" data-dtype="text" data-tooltip="{{localize 'FU.Tooltip.Willpower'}}"/>
+        <label style="font-size: x-small">{{localize 'FU.Willpower'}}</label></div>
+      </div> 
+  </div>
+  </div>
+  </header>
+
+ {{!-- HP and Ability Scores --}}
+  <header class="sheet-header">
+{{!-- Damage Bars --}}
+<div class="grid grid-5col">
+
+  <div class="sheet-section-1">
+    <button type="rolldie"  class="rollable unshake" 
+    data-roll="{d{{system.abilities.spi.value}}x, 1d6x}kh+{{system.abilities.spi.m.value}}+{{system.unshake.mod.value}}-{{system.wounds.value}}-{{system.insanity.value}}" 
+    data-label="{{localize 'FU.Unshake'}}">
+    <img style="width:25px; height:25px; position:relative; top:5px; left:-20px" src="systems\wild_universe\assets\Die.png" alt="Roll"/>
+    {{localize 'FU.Unshake'}}</button>
+ 
+</div>
+<div class="resource flex-group-center">
+<label for="system.exhaustion.value" class="resource-label">{{localize 'FU.exhaustion'}}</label>
+          
+            <div class="bar bar-progress bar-empty">
+            <div class="bar-progress-bar bar-ex"
+                 style="width: {{calculatePercentage system.exhaustion.value system.exhaustion.max}};">
+            </div>
+            
+        </div>
+        <div class="resource-content flexrow flex-center flex-between">
+          <input type="text" name="system.exhaustion.value" value="{{system.exhaustion.value}}" data-dtype="Number"/>
+          <span> / </span>
+          <label for="system.exhaustion.max" class="resource-label">{{system.exhaustion.max}}</label>
+          </div>
+
+</div>
+
+
+<div class="resource flex-group-center">
+  <label class="resource-label"  for="system.wounds.value">{{localize 'FU.wounds'}}</label>
+    <div class="bar bar-progress bar-empty">
+        <div class="bar-progress-bar  bar-hp"
+          style="width: {{calculatePercentage system.wounds.value system.wounds.max}};">
+        </div>
+       <span class="bar-value"></span>
+    </div>
+    <div class="resource-content flexrow flex-center flex-between">
+    <input type="text" name="system.wounds.value" value="{{system.wounds.value}}" data-dtype="Number"/>
+          <span> / </span>
+          <label for="system.wounds.max" class="resource-label">{{system.wounds.max}}</label>
+          </div>
+  </div> 
+
+
+   <div class="resource flex-group-center">
+          <label for="system.insanity.value" class="resource-label">{{localize 'FU.insanity'}}</label>
+        
+            <div class="bar bar-progress bar-empty">
+            <div class="bar-progress-bar  bar-in"
+                 style="width: {{calculatePercentage system.insanity.value system.insanity.max}};">
+            </div>
+            <span class="bar-value"></span>
+        </div>
+          <div class="resource-content flexrow flex-center flex-between">
+          <input type="text" name="system.insanity.value" value="{{system.insanity.value}}" data-dtype="Number"/>
+          <span> / </span>
+          <label for="system.insanity.max" class="resource-label">{{system.insanity.max}}</label>
+          </div>
+       </div>
+
+       <div class="sheet-section-1">
+    <button type="rolldie"  class="rollable unshake" data-roll="{d{{system.abilities.wit.value}}x, 1d6x}kh+{{system.abilities.wit.m.value}}+{{system.soak.mod.value}}-{{system.wounds.value}}" data-label="{{localize 'FU.Soak'}}">{{localize 'FU.Soak'}}  <img style="width:25px; height:25px; position:relative; top:5px; left:20px" src="systems\wild_universe\assets\Die.png"  alt="Roll" /></button>
+</div>
+</div>
+{{!-- Attributes --}}
+<div class="ability-input">
+  <div class="ability" >
+                <label for="system.abilities.str.value" class="ability-label" 
+                data-label="{{system.abilities.str.label}}">{{localize 'FU.Ability.Str.long'}}</label>
+                <div class="ability-input">
+                    <select style="width: 60px;" name="system.abilities.str.value" for="system.abilities.str.value" type="text">
+                      {{selectOptions @root.FU.choice selected=system.abilities.str.value localize=true}}
+                      </select>
+                      <span>+</span>
+                    <input style="width: 50px;"  name="system.abilities.str.m.value" value="{{system.abilities.str.m.value}}" type="text">   </input>      
+                </div>
+                <div class="ability-roll"> 
+                  <button type="rolldie"  class="rollable rolldie" data-roll="{d{{system.abilities.str.value}}x, 1d6x}kh+{{system.abilities.str.m.value}}-{{system.wounds.value}}-{{system.exhaustion.value}}" data-label="{{localize 'FU.Ability.Str.long'}}" ><img style="height: 25px;" src="systems\wild_universe\assets\Die.png"  alt="Roll" /></button> 
+               </div>
+             </div>
+
+<div class="ability" >
+                <label for="system.abilities.dex.value" class="ability-label" 
+                data-label="{{system.abilities.dex.label}}">{{localize 'FU.Ability.Dex.long'}}</label>
+                <div class="ability-input">
+                    <select style="width: 60px;" name="system.abilities.dex.value" for="system.abilities.dex.value" type="text">
+                      {{selectOptions @root.FU.choice selected=system.abilities.dex.value localize=true}}
+                      </select>
+                      <span>+</span>
+                    <input style="width: 50px;"  name="system.abilities.dex.m.value" value="{{system.abilities.dex.m.value}}" type="text">   </input>      
+                </div>
+                <div class="ability-roll"> 
+                  <button type="rolldie"  class="rollable rolldie"  data-roll="{d{{system.abilities.dex.value}}x, 1d6x}kh+{{system.abilities.dex.m.value}}-{{system.wounds.value}}-{{system.exhaustion.value}}" data-label="{{localize 'FU.Ability.Dex.long'}}"><img style="height: 25px;" src="systems\wild_universe\assets\Die.png"  alt="Roll" /></button> 
+               </div>
+             </div>
+
+
+  <div class="ability" >
+                <label for="system.abilities.wit.value" class="ability-label" 
+                data-label="{{system.abilities.wit.label}}">{{localize 'FU.Ability.Wit.long'}}</label>
+                <div class="ability-input">
+                    <select style="width: 60px;" name="system.abilities.wit.value" for="system.abilities.wit.value" type="text">
+                      {{selectOptions @root.FU.choice selected=system.abilities.wit.value localize=true}}
+                      </select>
+                      <span>+</span>
+                    <input style="width: 50px;"  name="system.abilities.wit.m.value" value="{{system.abilities.wit.m.value}}" type="text">   </input>      
+                </div>
+                <div class="ability-roll"> 
+                  <button type="rolldie"  class="rollable rolldie"  data-roll="{d{{system.abilities.wit.value}}x, 1d6x}kh+{{system.abilities.wit.m.value}}-{{system.wounds.value}}" data-label="{{localize 'FU.Ability.Wit.long'}}"><img style="height: 25px;" src="systems\wild_universe\assets\Die.png"  alt="Roll" /></button> 
+               </div>
+             </div>
+
+ <div class="ability" >
+                <label for="system.abilities.int.value" class="ability-label" 
+                data-label="{{system.abilities.int.label}}">{{localize 'FU.Ability.Int.long'}}</label>
+                <div class="ability-input">
+                    <select style="width: 60px;" name="system.abilities.int.value" for="system.abilities.int.value" type="text">
+                      {{selectOptions @root.FU.choice selected=system.abilities.int.value localize=true}}
+                      </select>
+                      <span>+</span>
+                    <input style="width: 50px;"  name="system.abilities.int.m.value" value="{{system.abilities.int.m.value}}" type="text">   </input>      
+                </div>
+                <div class="ability-roll"> 
+                  <button type="rolldie"  class="rollable rolldie"  data-roll="{d{{system.abilities.int.value}}x, 1d6x}kh+{{system.abilities.int.m.value}}-{{system.wounds.value}}-{{system.insanity.value}}" data-label="{{localize 'FU.Ability.Int.long'}}"><img style="height: 25px;" src="systems\wild_universe\assets\Die.png"  alt="Roll" /></button> 
+               </div>
+             </div>
+
+  <div class="ability" >
+                <label for="system.abilities.spi.value" class="ability-label" 
+                data-label="{{system.abilities.spi.label}}">{{localize 'FU.Ability.Spi.long'}}</label>
+                <div class="ability-input">
+                    <select style="width: 60px;" name="system.abilities.spi.value" for="system.abilities.spi.value" type="text">
+                      {{selectOptions @root.FU.choice selected=system.abilities.spi.value localize=true}}
+                      </select>
+                      <span>+</span>
+                    <input style="width: 50px;"  name="system.abilities.spi.m.value" value="{{system.abilities.spi.m.value}}" type="text">   </input>      
+                </div>
+                <div class="ability-roll"> 
+                  <button type="rolldie"  class="rollable rolldie"  data-roll="{d{{system.abilities.spi.value}}x, 1d6x}kh+{{system.abilities.spi.m.value}}-{{system.wounds.value}}-{{system.insanity.value}}" data-label="{{localize 'FU.Ability.Spi.long'}}"><img style="height: 25px;" src="systems\wild_universe\assets\Die.png"  alt="Roll" /></button> 
+               </div>
+             </div>
+
+</div>
+</header>
+
+
+
+</body>
+
+ {{!-- Sheet Tab Navigation --}}
+  <nav class="sheet-tabs tabs" data-group="primary">
+    {{!-- Default tab is specified in actor-sheet.mjs --}}
+    <a class="item" data-tab="bio">{{localize 'FU.Bio'}}</a>
+    <a class="item" data-tab="skills">{{localize 'FU.Skills'}}</a>
+    <a class="item" data-tab="traits">{{localize 'FU.Traits'}}</a>
+    <a class="item" data-tab="equipment">{{localize 'FU.Equipment'}}</a>
+    {{#if system.magic.check}}
+    <a class="item" data-tab="magic">{{localize 'FU.Magic'}}</a>
+    {{/if}}
+    <a class="item" data-tab="settings">{{localize 'FU.Settings'}}</a>
+  
+  </nav>
+
+  
+ {{!-- Sheet Body --}}
+  <section class="sheet-body">
+
+
+    {{!-- Biography Tab --}}
+    <div class="tab biography" data-group="primary" data-tab="bio">
+
+        {{> "systems/furry-universe/templates/actor/parts/actor-bio.hbs"}}
+    </div>
+
+      {{!-- Skills --}}
+    <div class="tab items" data-group="primary" data-tab="skills">
+     {{> "systems/furry-universe/templates/actor/parts/actor-skills.hbs"}}
+    </div>
+      {{!-- Traits --}}
+    <div class="tab items" data-group="primary" data-tab="traits">
+     {{> "systems/furry-universe/templates/actor/parts/actor-traits.hbs"}}
+    </div>
+
+        {{!-- Equipment --}}
+    <div class="tab items" data-group="primary" data-tab="equipment">
+     {{> "systems/furry-universe/templates/actor/parts/actor-equipment.hbs"}}
+    </div>
+
+    {{!-- Magic --}}
+    <div class="tab spells" data-group="primary" data-tab="magic">
+      {{> "systems/furry-universe/templates/actor/parts/actor-magic.hbs"}}
+    </div>
+
+      
+    {{!-- Settings Tab --}}
+    <div class="tab items" data-group="primary" data-tab="settings">
+      {{> "systems/furry-universe/templates/actor/parts/actor-settings.hbs"}}
+    </div>
+
+</section>
+ 
+</form>

@@ -1,0 +1,314 @@
+{
+  "Actor": {
+    "types": ["character", "sidekick", "npc", "vehicle"],
+    "templates": {
+      "hp": {
+        "wounds": {
+          "value": 0,
+          "min": 0,
+          "max": 3
+        },
+        "insanity": {
+          "value": 0,
+          "min": 0,
+          "max": 3
+        },
+        "exhaustion": {
+          "value": 0,
+          "min": 0,
+          "max": 3
+        },
+        "magic": {
+          "value": 0,
+          "min": 0,
+          "max": 0
+        },
+        "power": {
+          "value": 0,
+          "min": 0,
+          "max": 0
+        }
+          },
+      "bio":{
+          "archetype": "" ,
+          "race": "",
+          "gender":"",
+          "age":"",
+          "height":"",
+          "weight":"",
+          "eyes":"",
+          "biography": ""
+          },
+      "inv":{
+        "funds":{
+          "gold": "1000",
+          "silver": ""
+        },
+        "encumbrance": {
+          "value": 0,
+          "min": 0,
+          "max": 10
+        }  
+          },
+      "passive":{
+        "size":0,
+        "speed":0,
+        "defense":4,
+        "firewall": 0,
+        "toughtness":4,
+        "armor":0,
+        "willpower":4,
+        "notice": 0
+          },
+      "abilities": {
+        "abilities": {
+        "str": {
+          "value": 4,
+          "min": 4,
+          "max": 12,
+          "m": {
+            "value": 0
+          }
+        },
+        "dex": {
+          "value": 4,
+          "min": 4,
+          "max": 12,
+          "m": {
+            "value": 0
+          }
+        },
+        "wit": {
+          "value": 4,
+          "min": 4,
+          "max": 12,
+          "m": {
+            "value": 0
+          }
+        },
+        "int": {
+          "value": 4,
+          "min": 4,
+          "max": 12,
+          "m": {
+            "value": 0
+          }
+        },
+        "spi": {
+          "value": 4,
+          "min": 4,
+          "max": 12,
+          "m": {
+            "value": 0
+          }
+        }
+      }
+          },
+      "skills":{
+          "Faith":  { "value": 4, "mod": 0  },
+          "Unskilled":  { "phy": 4, "int": 4, "spi": 4, "modP": -2, "modM": -2, "modS": -2  },
+          "Taming": { "value": 4, "mod": 0  },
+          "Psionic": { "value": 4, "mod": 0  },
+          "Persuasion": { "value": 4, "mod": 0  },
+          "Rituals": { "value": 4, "mod": 0  },
+          "Perform": { "value": 4, "mod": 0  },
+          "Intimidation": { "value": 4, "mod": 0  },
+          "Bluff": { "value": 4, "mod": 0  },
+          "Atletics":{ "value": 4, "mod": 0  },
+          "Riding": { "value": 4, "mod": 0  },
+          "Driving": { "value": 4, "mod": 0  },
+          "Fighting":{ "value": 4, "mod": 0  },
+          "Shooting": { "value": 4, "mod": 0  },
+          "Stealth": { "value": 4, "mod": 0  },
+          "Tievery": { "value": 4, "mod": 0  },
+          "Investigation": { "value": 4, "mod": 0  },
+          "Hacking": { "value": 4, "mod": 0  },
+          "Healing": { "value": 4, "mod": 0  },
+          "Repair": { "value": 4, "mod": 0  },
+          "Perception": { "value": 4, "mod": 0  },
+          "Piloting": { "value": 4, "mod": 0  },
+          "Survival": { "value": 4, "mod": 0  },
+          "Spellcasting": { "value": 4, "mod": 0  },
+          "Trade": { "value": 4, "mod": 0  },
+          "History": { "value": 4, "mod": 0  },
+          "Cartography": { "value": 4, "mod": 0  },
+          "Space":{ "value": 4, "mod": 0  },
+          "Art": { "value": 4, "mod": 0  },
+          "Tactic": { "value": 4, "mod": 0  },
+          "Technology": { "value": 4, "mod": 0  },
+          "Arcane": { "value": 4, "mod": 0  },
+          "Medicine": { "value": 4, "mod": 0  },
+          "Nature": { "value": 4, "mod": 0  },
+          "Science": { "value": 4, "mod": 0  },
+          "Occult": { "value": 4, "mod": 0  },
+          "Politic": { "value": 4, "mod": 0  },
+          "Underworld": { "value": 4, "mod": 0  },
+          "Religion": { "value": 4, "mod": 0  }
+      },
+        "arcane":{
+        "ArcaneBackground": "",
+        "ArcaneSkill": "",
+        "Notes":"",
+        "spells":"",
+        "schools":"",
+        "magic": {
+            "value": 0,
+            "min": "",
+            "max": ""
+            },
+        "power": {
+            "value": 0,
+            "min": "",
+            "max": ""
+            }
+        },
+        "equipment": {
+          "head":{
+            "item": "",
+            "armor": 0,
+            "necklace": "",
+            "attuned":""
+          },
+        "torso":{
+            "item": "",
+            "armor": 0,
+            "cloak": "",
+            "attuned":""
+          },
+        "rightarm":{
+            "item": "",
+            "held":"",
+            "armor": 0,
+            "ring": "",
+            "defense": 0,
+            "attuned":""
+          },
+        "leftarm":{
+            "item": "",
+            "held":"",
+            "armor": 0,
+            "ring": "",
+            "defense": 0,
+            "attuned":""
+          },
+        "legs":{
+            "item": "",
+            "armor": 0,
+            "shoes": "",
+            "belt": "",
+            "attuneds":"",
+            "attunedb":""
+          },
+          "arms": {
+            "gloves": "",
+            "attuned":""
+          }
+        }
+        },
+
+    "character": {
+      "templates": [
+        "hp",
+        "bio",
+        "inv",
+        "passive",
+        "abilities",
+        "skills",
+        "arcane",
+        "equipment"
+      ],
+      "archetype": "" ,
+      "checkbox": false,
+      "backpacknotes": "",
+      "attributes": {
+        "level": {
+          "value": "0"
+        },
+        "xp": {
+          "value": 0
+        },
+        "rank": "Novice",
+        "luck": 3
+          }
+      },
+  
+    "sidekick": {
+      "templates": ["hp","passive","personal", "inventory", "abilities"],
+      "attributes": {
+        "level": {
+          "value": 0
+        },
+        "xp": {
+          "value": 0
+        },
+        "rank": ""
+    }
+  },
+    "npc": {
+      "templates": ["hp","passive", "abilities"],
+      "cr": 0
+    }
+  },
+  "Item": {
+    "types": ["item", "spell", "advance", "hindrance", "attack", "talent"],
+    "templates": {
+      "base": {
+        "description": ""
+      }
+    },
+    "item": {
+      "templates": ["base"],
+      "quantity": 1,
+      "weight": 0
+    },
+    "hindrance": {
+      "templates": ["base"],
+      "lvtaken": "",
+      "advancetype": "Racial"
+    },
+    "talent": {
+      "templates": ["base"],
+      "lvtaken": "",
+      "advancetype": "Racial"
+    },
+    "advance": {
+      "templates": ["base"],
+      "lvtaken": 0,
+      "advancetype": "Talent"
+    },
+    "attack": {
+      "templates": ["base"],
+      "aability": "flat",
+      "type": "ranged",
+      "addability":"",
+      "range": "",
+      "rof": "",
+      "ap": 0,
+      "damage": "",
+      "damagetype":"",
+      "ammo": {
+            "value": "0",
+            "min": "0",
+            "max": ""
+            },
+      "traits": ""
+    },
+
+    "spell": {
+      "templates": ["base"],
+       "aability": "flat",
+      "rank": "Novice",
+      "addability":"",
+      "target": "Self",
+      "range": "Touch",
+      "power": "1",
+      "ap": 0,
+      "cost": "2",
+      "duration": "Instant",
+      "damage": "",
+      "damagetype":"",
+      "traits":"",
+      "sustain": ""
+    }
+  }
+}

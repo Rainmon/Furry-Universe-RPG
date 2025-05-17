@@ -1,0 +1,55 @@
+
+
+ 
+ 
+   
+  
+
+   
+        
+    
+<ol class='items-list'>
+  <li class='item flexrow items-header'>
+    <div class='item-name'></div>
+    <div class='item-controls'>
+      <a class='item-control item-create' title='Create item' data-type='advance'>
+        {{localize 'FU.LevelUp'}}
+      </a>
+    </div>
+  </li>
+  {{#each advances as |item id|}}
+    <li class='item flexrow' data-item-id='{{item._id}}'>
+      <div>
+        <input class="ability-roll" name="{{item.level}}" 
+        value="{{item.level}}" type="text">
+      </div>
+
+        <select style="width: 120px;" 
+            name="system.type" 
+            value="{{system.type}}" type="text">
+          {{selectOptions @root.FU.advancetype selected=system.type localize=true}}
+         </select>
+      
+      <div class="ability-input">
+        <input class="ability-roll" name="{{item.name}}" 
+        value="{{item.name}}" type="text">
+      </div>
+      <div class='item-controls'>
+        <a
+          class='item-control item-edit'
+          title='{{localize "DOCUMENT.Edit" type='advance'}}'
+        >
+          <i class='fas fa-edit'></i>
+        </a>
+        <a
+          class='item-control item-delete'
+          title='{{localize "DOCUMENT.Delete" type='advance'}}'
+        >
+          <i class='fas fa-trash'></i>
+        </a>
+      </div>
+    </li>
+  {{/each}}
+</ol>
+      
+   

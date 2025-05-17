@@ -1,0 +1,144 @@
+{{! This template is a fallback for when items don't have more specific templates. }}
+{{! Generally, you'll want to make more specific templates when possible. }}
+<form class='{{cssClass}} item-sheet'  autocomplete='off'>
+  <header class='frame'>
+    <div class="spell-display">
+      <div style="width:450px">
+        <h1 class='charname'> <input name='name'type='text'value='{{item.name}}' placeholder='Name'/>
+        <select class="skill-dice bio-caption" style="height:15px; background-color: rgba(255, 255, 255, 0);
+            border: 0px solid #000000;" name="system.rank">
+        {{selectOptions @root.FU.Rank selected=system.rank localize=true}}
+      </select> 
+        </h1>
+        <table>
+  <tr>
+    <td><label class="resource">{{localize 'FU.Range'}}</label></td>
+    <td>
+      <select class="skill-dice" style="width:100px; text-align:center" name="system.range">
+        {{selectOptions @root.FU.Range selected=system.range localize=true}}
+      </select>
+    </td>
+    </tr>
+  <tr>
+    <td><label class="resource">{{localize 'FU.Target'}}</label>
+    </td>
+    <td>
+      <input class="skill-dice" style="width:100px" name="system.target" value="{{system.target}}" type="text" />
+    </td>
+    
+  </tr>
+  <tr>
+    <td><label class="resource">{{localize 'FU.Cost'}}</label></td>
+    <td>
+      <input class="skill-dice" style="width:100px" name="system.cost" value="{{system.cost}}" type="text" />
+    </td>
+     </tr>
+  <tr>
+    <td><label class="resource">{{localize 'FU.Power'}}</label></td>
+    <td>
+      <input class="skill-dice" style="width:100px" name="system.power" value="{{system.power}}" type="text" />
+    </td>
+  </tr>
+  <tr>
+    <td><label class="resource">{{localize 'FU.Duration'}}</label></td>
+    <td>
+      <input class="skill-dice" style="width:100px" name="system.duration" value="{{system.duration}}" type="text" />
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <label class="resource">{{localize 'FU.ChooseDamageType'}}</label>
+    </td>
+    <td>
+        <select name="system.addability">{{selectOptions @root.FU.dmg selected=system.addability localize=true}}
+          </select>
+     </td>
+  </tr>
+{{! Damage roll type chosen}}
+  <tr>
+    <td>
+{{#if (eq system.addability "flat")}}
+    <button type="rolldie" class="skill-roll exploding-roll-button"  
+    data-label="{{item.name}} {{localize 'FU.Damage'}}">
+    <img src="systems/furry-universe/css/ui/Die.png" alt="Roll" />
+    </button>
+ {{/if}}
+{{#if (eq system.addability "stat")}}
+    <button type="rolldie" class="skill-roll exploding-roll-button"  
+    data-action="custom-roll">
+    <img src="systems/furry-universe/css/ui/Die.png" alt="Roll" />
+    </button>
+   {{/if}}
+    <label class="resource">{{localize 'FU.Damage'}}</label>
+    </td>
+
+    <td>
+{{#if (eq system.addability "stat")}}
+    <select id="stat-select" name="system.aability">
+      {{selectOptions @root.FU.abilities selected=system.aability localize=true}}
+      </select>
+{{/if}}
+      <input class="skill-dice" id="dice-input"  style="width:100px" name="system.damage" value="{{system.damage}}" type="text" placeholder="{{localize 'FU.Damage'}}"/>
+      <input class="skill-dice" style="width:100px" name="system.damagetype" value="{{system.damagetype}}" type="text" placeholder="{{localize 'FU.DamageType.Type'}}"/>
+    
+      </td>
+  </tr>
+    <tr>
+    <td><label class="resource">{{localize 'FU.AP'}}</label></td>
+    <td>
+      <input class="skill-dice" style="width:100px" name="system.ap" value="{{system.ap}}" type="text" />
+    </td>
+     </tr>
+  <tr>
+
+</td>
+
+
+
+  
+
+  </tr>
+    <tr>
+    <td><label class="resource">{{localize 'FU.Traits'}}</label></td>
+    <td>
+      <input class="skill-dice" style="width:200px" name="system.traits" value="{{system.traits}}" type="text" />
+    </td>
+  </tr>
+</table>
+
+      </div>
+      <div style="width:150px">
+        <img class='profile-img' src='{{item.img}}' data-edit='img' title='{{item.name}}'/>
+      </div>
+
+
+    </div>
+      
+        
+   
+    
+
+     
+  </header>
+
+  {{! Sheet Tab Navigation }}
+  <nav class='sheet-tabs tabs' data-group='primary'>
+    <a class='item' data-tab='description'>Description</a>
+  </nav>
+
+  {{! Sheet Body }}
+  <section class='sheet-body'>
+
+    {{! Description Tab }}
+    <div class='tab' data-group='primary' data-tab='description'>
+      {{! Editors must receive enriched text data from getData to properly handle rolls }}
+      {{editor
+        enrichedDescription
+        target='system.description'
+        engine='prosemirror'
+        button=true
+        editable=editable
+      }}
+    </div>
+  </section>
+</form>

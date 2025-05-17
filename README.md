@@ -1,0 +1,1 @@
+Heaily modified Savage World system for Foundry VTT with personal layout and homebrew options. Its barebone version with almost none automation and no visual style, just working sheet with manual inputs and easy to use layout of elements. 
